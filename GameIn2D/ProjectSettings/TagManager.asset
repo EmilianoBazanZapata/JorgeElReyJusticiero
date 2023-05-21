@@ -9,6 +9,9 @@ TagManager:
   - Potion
   - Enemy
   - Limit
+  - Wall
+  - Ground
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Wall
+  - Plataform
   - 
   - 
   - 
