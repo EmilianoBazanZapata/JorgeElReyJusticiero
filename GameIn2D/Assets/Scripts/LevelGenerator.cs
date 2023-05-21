@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    //primer bloque del nivel
-    //public GameObject firstBlock;
     public static LevelGenerator SharedInstance;
     public List<LevelBlock> AllTheLevelBlocks = new List<LevelBlock>();
     public Transform LevelStartPoint;
@@ -14,12 +12,17 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
         SharedInstance = this;
-        //transform.position = new Vector3((float)-13.177, 0, 0);
-        //Instantiate(firstBlock, transform.position, transform.rotation);
     }
     private void Start()
     {
-        GenerateInitialBlock();
+       GenerateInitialBlock();
+    }
+    public void GenerateInitialBlock()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            AddLevelBlock();
+        }
     }
     public void AddLevelBlock()
     {
@@ -29,7 +32,7 @@ public class LevelGenerator : MonoBehaviour
         LevelBlock CurrentBlock = (LevelBlock)Instantiate(AllTheLevelBlocks[RandomIndex]);
         //pone el bloque del nivel como hijo de lLevelGenerator
         CurrentBlock.transform.SetParent(this.transform, false);
-
+        
         Vector3 SpawPosition = Vector3.zero;
         if (CurrentBlocks.Count == 0)
         {
@@ -42,8 +45,7 @@ public class LevelGenerator : MonoBehaviour
         //corregimos la posicion del bloque restando las posiciones
         Vector3 Correction = new Vector3(SpawPosition.x - CurrentBlock.StartPoint.position.x,
                                          SpawPosition.y - CurrentBlock.StartPoint.position.y, 0);
-
-        //Debug.Log(Correction);
+        
         CurrentBlock.transform.position = Correction;
         CurrentBlocks.Add(CurrentBlock);
 
@@ -60,15 +62,6 @@ public class LevelGenerator : MonoBehaviour
         while (CurrentBlocks.Count > 0)
         {
             RemoveLevelBlock();
-        }
-    }
-    public void GenerateInitialBlock()
-    {
-        //transform.position = new Vector3((float)-13.177, 0, 0);
-        //Instantiate(firstBlock, transform.position, transform.rotation);
-        for (int i = 0; i < 4; i++)
-        {
-            AddLevelBlock();
         }
     }
 }

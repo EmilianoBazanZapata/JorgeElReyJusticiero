@@ -26,10 +26,10 @@ public class PlayerBar : MonoBehaviour
         switch(Type)
         {
             case BarType.Healt:
-                slider.value = PlayerController.SharedInstance.GetHealth();
+                slider.value = PlayerController.sharedInstance.GetHealth();
                 break;
             case BarType.Mana:
-                slider.value = PlayerController.SharedInstance.GetMana();
+                slider.value = PlayerController.sharedInstance.GetMana();
                 break;
         }
     }

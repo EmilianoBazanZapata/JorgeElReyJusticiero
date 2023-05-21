@@ -1,249 +1,311 @@
-﻿using System.Diagnostics;
-using System.Numerics;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //fuerza de salto
-    public float JumpForce = 5f;
-    public float SuperJumpForce = 8f;
-    //rigidbody del personaje que usare para saltar
+    #region Variables
+
+    [SerializeField] public float jumpForce = 5f;
+    [SerializeField] public float superJumpForce = 8f;
+    [SerializeField] public float runForce = 4.0f;
+    [SerializeField] public float walkSpeed = 2f;
+    [SerializeField] public float initialWalkSpeed = 2f;
+    [SerializeField] public Animator animatorPlayer;
+    [SerializeField] public LayerMask wallLayer;
+
+    public BoxCollider2D boxCollider2d;
     private Rigidbody2D rigidBody;
-    //variable para detectar la capa del suelo
+    private UnityEngine.Vector3 startPosition;
+    private float healtPoints, manaPoints;
+    private bool isTouchingGround = false;
+    private bool isCollidingWall = false;
+
+    private const int INITIAL_HEALT = 90;
+    private const int INITIAL_MANA = 90;
+    private const int MAX_HEALTH = 100;
+    private const int MAX_MANA = 100;
+    private const int MANA_DECRASE = 5;
+    private const float MANA_DECREASE_DELAY = 100;
+    private const float MANA_DECREASE_AMOUNT = 0.5f;
+    private const int MANA_DECREASE = 5;
+    private int jumpsRemaining = 2;
+
+    public static PlayerController sharedInstance;
     public LayerMask GroundLayer;
-    //variable para manejar las animaciones
-    public Animator AnimatorPlayer;
-    //fuerza que aplico para caminar
-    public float WalkSpeed = 4.0f;
-    //referencia a una instancia unica de la clase
-    public static PlayerController SharedInstance;
-    //variable para almacenar la posicion del personaje
-    private UnityEngine.Vector3 StartPosition;
+    public LayerMask PlatformLayer;
 
-    private int HealtPoints, ManaPoints;
-
-    public BoxCollider2D Collider2D;
-
-    //variables constantes
-    private const int INITIAL_HEALT = 80, INITIAL_MANA = 80, MAX_HEALTH = 100, MAX_MANA = 100, MIN_HEALTH = 45, MIN_MANA = 0, MANA_DECRASE = 5;
-    private const float MIN_SPEED = 2.5f, HEALT_TIME_DECRASE = 3.5f, MANA_TIME_DECRASE = 10f;
+    #endregion
 
     private void Awake()
     {
-        SharedInstance = this;
+        if (sharedInstance == null)
+        {
+            sharedInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         rigidBody = GetComponent<Rigidbody2D>();
-        //posicion inicial del personaje
-        StartPosition = this.transform.position;
+        boxCollider2d = GetComponent<BoxCollider2D>();
+        startPosition = transform.position;
+    }
+
+    private void Start()
+    {
+        rigidBody = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
     }
 
     public void StartGame()
     {
-        AnimatorPlayer.SetBool("IsGrounded", true);
-        AnimatorPlayer.SetBool("Walk", false);
-        //asigno la posicion inicial del personaje cada vez que reinciamos el juego
-        this.transform.position = StartPosition;
-        HealtPoints = INITIAL_HEALT;
-        ManaPoints = INITIAL_MANA;
-        //StartCoroutine("TirePlayer");
+        animatorPlayer.SetBool("IsGrounded", true);
+        animatorPlayer.SetBool("Walk", false);
+        this.transform.position = startPosition;
+        healtPoints = INITIAL_HEALT;
+        manaPoints = INITIAL_MANA;
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        //Solo se podra saltar si el Modo de Juego es InGame
-        if (GameManager.SharedInstance.CurrentGameState == GameState.InGame)
+        if (GameManager.SharedInstance.CurrentGameState != GameState.InGame) return;
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (isTouchingGround)
             {
-                //aqi el usuario acaba de pulsar la tecla espacio
                 Jump();
             }
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            else if (jumpsRemaining > 0 && manaPoints > 0)
             {
-                //aqi el usuario acaba de pulsar la tecla espacio
                 SuperJump();
             }
-            AnimatorPlayer.SetBool("IsGrounded", IsTouchingTheGround());
         }
+
+        SuperRun();
     }
 
     private void FixedUpdate()
     {
-        //la velocidad en el eje x ira cambiando respetando la velocidad maxima
-        //la velocidad en el eje y sera la que acumule al caminar
-        //Solo se podra mover si el Modo de Juego es InGame
-        if (GameManager.SharedInstance.CurrentGameState == GameState.InGame)
-        {
-            float CurrentSpeed = (WalkSpeed - MIN_SPEED) * this.HealtPoints / 100.0f;
-            //UnityEngine.Debug.Log(CurrentSpeed);
-            if (Input.GetButton("HorizontalPositive"))
-            {
-                if (rigidBody.velocity.x < CurrentSpeed)
-                {
+        if (GameManager.SharedInstance.CurrentGameState != GameState.InGame) return;
 
-                    rigidBody.velocity = new UnityEngine.Vector2(CurrentSpeed, rigidBody.velocity.y);
-                    transform.localScale = new UnityEngine.Vector2(1, 1);
-                    AnimatorPlayer.SetBool("Walk", true);
-                }
-            }
-            if (Input.GetButton("HorizontalNegative"))
-            {
-                if (rigidBody.velocity.x > -CurrentSpeed)
-                {
-                    rigidBody.velocity = new UnityEngine.Vector2(-CurrentSpeed, rigidBody.velocity.y);
-                    transform.localScale = new UnityEngine.Vector2(-1, 1);
-                    AnimatorPlayer.SetBool("Walk", true);
-                }
-            }
-            if (Input.GetButtonUp("HorizontalPositive") || Input.GetButtonUp("HorizontalNegative"))
-            {
-                AnimatorPlayer.SetBool("Walk", false);
-            }
-            SuperRun();
-        }
-        if(IsTouchingTheGround())
+        float direction = Input.GetAxisRaw("HorizontalMove");
+
+        // Verificar si hay una pared en la dirección en la que quieres mover al jugador
+        bool isCollidingWall = CollisionWall(direction);
+
+        if (direction != 0 && !isCollidingWall)
         {
-            Collider2D.enabled = true;
+            float targetVelocityX = direction * walkSpeed;
+            float velocityChangeX = targetVelocityX - rigidBody.velocity.x;
+            rigidBody.AddForce(new UnityEngine.Vector2(velocityChangeX, 0), ForceMode2D.Impulse);
+            transform.localScale = new UnityEngine.Vector2(direction, 1);
+            animatorPlayer.SetBool("Walk", true);
         }
         else
         {
-            Collider2D.enabled = false;
+            animatorPlayer.SetBool("Walk", false);
         }
     }
-    //metodo para que el jugador pueda correr
+
+    private bool CollisionWall(float direction)
+    {
+        // Calcular el punto de origen del raycast de caja
+        UnityEngine.Vector2 raycastOrigin =
+            new UnityEngine.Vector2(transform.position.x, transform.position.y - boxCollider2d.size.y / 2f);
+
+        // Calcular el tamaño y dirección del raycast de caja
+        UnityEngine.Vector2 raycastSize = new UnityEngine.Vector2(0.2f, 0.5f);
+        UnityEngine.Vector2 raycastDirection = new UnityEngine.Vector2(direction, 0);
+
+        // Realizar el raycast de caja
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new UnityEngine.Vector2(direction, 0), 0.5f,
+            wallLayer);
+        // Verificar si se detectó una colisión
+        if (hit.collider != null)
+            return true;
+
+        return false;
+    }
+
     private void SuperRun()
     {
-        if (Input.GetButton("SuperRun") && ManaPoints > 0)
+        if (Input.GetButton("SuperRun") && manaPoints > 0)
         {
-            this.WalkSpeed = 6.0f;
-            StartCoroutine("RemoveMana");
+            walkSpeed = runForce;
+            manaPoints -= MANA_DECREASE_AMOUNT;
+            Invoke("DecreaseMana", MANA_DECREASE_DELAY);
         }
         else
         {
-            this.WalkSpeed = 4.0f;
+            walkSpeed = initialWalkSpeed;
+            CancelInvoke("DecreaseMana");
         }
     }
+
     private void Jump()
     {
-        //f = m * a
-
-        if (IsTouchingTheGround() == true && GameManager.SharedInstance.CurrentGameState == GameState.InGame)
+        if (isTouchingGround)
         {
-
-            rigidBody.AddForce(UnityEngine.Vector2.up * JumpForce, ForceMode2D.Impulse);           
+            rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animatorPlayer.SetBool("IsGrounded", false);
+            this.isTouchingGround = false;
+            jumpsRemaining = 1;
         }
     }
-    //super salto 
+
     private void SuperJump()
     {
-        //f = m * a
-
-        if (IsTouchingTheGround() == true && ManaPoints > 0 && GameManager.SharedInstance.CurrentGameState == GameState.InGame)
-        {
-
-            rigidBody.AddForce(UnityEngine.Vector2.up * SuperJumpForce, ForceMode2D.Impulse);
-            this.ManaPoints -= MANA_DECRASE;
-        }
-        StopCoroutine("RemoveMana");
+        rigidBody.AddForce(Vector2.up * superJumpForce, ForceMode2D.Impulse);
+        manaPoints -= MANA_DECREASE;
+        animatorPlayer.SetBool("IsGrounded", false);
+        jumpsRemaining = 0;
     }
 
-    //metodo para validar si el personaje toca el suelo o no
     bool IsTouchingTheGround()
     {
         //trazare un raycast hacia abajo para veirificar si toco el suelo hasta un maximo de 80cm
-        if (Physics2D.Raycast(this.transform.position, UnityEngine.Vector2.down, 0.8f, GroundLayer))
-        {
+        if (Physics2D.Raycast(this.transform.position, UnityEngine.Vector2.down, 0.8f, GroundLayer) ||
+            Physics2D.Raycast(this.transform.position, UnityEngine.Vector2.down, 0.8f, PlatformLayer))
             return true;
-        }
-        else
-        {
-            return false;
-        }
+
+        return false;
     }
-    //metodo que se usara para matar al jugador
+
     public void Kill()
     {
         GameManager.SharedInstance.GameOver();
-        //almacenare la distancia maxima recorrida por primera vez que en este caso de 0 
         float CurrentMaxDistance = PlayerPrefs.GetFloat("MaxDistance", 0);
+
         if (CurrentMaxDistance < this.GetDistance())
-        {
-            //si la distancia al morir es mayor que 0 tenemos un nuevo record
             PlayerPrefs.SetFloat("MaxDistance", this.GetDistance());
-        }
-        //StopCoroutine("TirePlayer");
+
+        boxCollider2d.isTrigger = false;
     }
-    //metodo para calcular la distancia recorrida
+
     public float GetDistance()
-    {                                                         //inicio
-        float TraveledDistance = UnityEngine.Vector2.Distance(new UnityEngine.Vector2(StartPosition.x, 0),
-                                                              //final
-                                                              new UnityEngine.Vector2(this.transform.position.x, 0));
-        return TraveledDistance;//this.transfomr.x - startposition.x
+    {
+        float traveledDistance = Mathf.Abs(transform.position.x - startPosition.x);
+        return traveledDistance;
     }
-    //metodo para aumentar la vida
+
     public void CollectHealt(int points)
     {
-        this.HealtPoints += points;
-        if (HealtPoints >= MAX_HEALTH)
-        {
-            this.HealtPoints = MAX_HEALTH;
-        }
-
+        this.healtPoints = (this.healtPoints + points > MAX_HEALTH) ? MAX_HEALTH : this.healtPoints + points;
     }
-    //metodo para aumentar el mana
+
     public void CollectMana(int points)
     {
-        this.ManaPoints += points;
-        if (this.ManaPoints >= MAX_MANA)
+        this.manaPoints += points;
+        if (this.manaPoints >= MAX_MANA)
         {
-            this.ManaPoints = MAX_MANA;
+            this.manaPoints = MAX_MANA;
         }
     }
 
-    //metodo para retornar el valor de vida
-    public int GetHealth()
+    public float GetHealth()
     {
-        return this.HealtPoints;
+        return this.healtPoints;
     }
-    //metodo para retornar el valor de mana inicial
-    public int GetMana()
+
+    public float GetMana()
     {
-        return this.ManaPoints;
-        StopCoroutine("RemoveMana");
+        return this.manaPoints;
     }
-    //corrutina para restar vida al jugador
-    /*IEnumerator TirePlayer()
+
+    private void RemoveMana()
     {
-        while (this.HealtPoints > MIN_HEALTH)
+        manaPoints -= MANA_DECRASE;
+        if (manaPoints <= 0)
         {
-            this.HealtPoints--;
-            yield return new WaitForSeconds(HEALT_TIME_DECRASE);
+            CancelInvoke("RemoveMana");
         }
-        yield return null;
-    }*/
-    //corrutina para disminuir el mana del jugador
-    IEnumerator RemoveMana()
-    {
-        while (this.ManaPoints > MIN_MANA)
-        {
-            this.ManaPoints--;
-            yield return new WaitForSeconds(MANA_TIME_DECRASE);
-        }
-        yield return null;
     }
-    //metodo que usare cuando el enemigo toque al jugador
+
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (otherCollider.tag == "Enemy")
+        if (otherCollider.CompareTag("Enemy"))
         {
-            this.HealtPoints -= 20;
+            this.healtPoints -= 20;
+            if (this.healtPoints <= 0)
+            {
+                Kill();
+            }
         }
-        if (this.HealtPoints <= 0)
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
         {
-            Kill();
+            ContactPoint2D[] contacts = new ContactPoint2D[other.contactCount];
+            other.GetContacts(contacts);
+            foreach (ContactPoint2D contact in contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    isTouchingGround = true;
+                    boxCollider2d.isTrigger = false;
+                    animatorPlayer.SetBool("IsGrounded", isTouchingGround);
+                    break;
+                }
+                else
+                {
+                    boxCollider2d.isTrigger = true;
+                    Invoke("EnableCollider", 0.5f);
+                    break;
+                }
+            }
+        }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            boxCollider2d.isTrigger = false;
+        }
+    }
+
+    private void EnableCollider()
+    {
+        boxCollider2d.isTrigger = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            this.isTouchingGround = true;
+            animatorPlayer.SetBool("IsGrounded", isTouchingGround);
+            jumpsRemaining = 2;
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            isCollidingWall = true;
+        }
+
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            isCollidingWall = true;
+            this.isTouchingGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            this.isCollidingWall = false;
+        }
+
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            this.isTouchingGround = false;
+        }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            this.isTouchingGround = false;
         }
     }
 }

@@ -58,14 +58,13 @@ public class Collectable : MonoBehaviour
                     GameManager.SharedInstance.CollectObject(value);
                     break;
                 case CollectableType.HealtPotion:
-                    PlayerController.SharedInstance.CollectHealt(value);
+                    PlayerController.sharedInstance.CollectHealt(value);
                     break;
                 case CollectableType.ManaPotion:
-                    PlayerController.SharedInstance.CollectMana(value);
+                    PlayerController.sharedInstance.CollectMana(value);
                     break;
             }
 
         }
-
     }
 }

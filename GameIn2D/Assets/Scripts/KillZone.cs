@@ -8,9 +8,8 @@ public class KillZone : MonoBehaviour
     {
         if (collision.tag == "King") 
         {
-            //Debug.Log("el jugador murio");
             //metodo que matara al jugador
-            PlayerController.SharedInstance.Kill();
+            PlayerController.sharedInstance.Kill();
         }
     }
 }

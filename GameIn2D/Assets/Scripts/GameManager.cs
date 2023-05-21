@@ -45,11 +45,12 @@ public class GameManager : MonoBehaviour
     {
         SharedInstance = this;
     }
+    
     private void Start()
     {
         BackToMenu();
-
     }
+    
     private void Update()
     {
         if (Input.GetButton("Pause"))
@@ -57,35 +58,33 @@ public class GameManager : MonoBehaviour
             Pause();
         }
     }
+    
     //metodo para iniciar el juego
     public void StartGame()
     {
         //creo el primer bloque del nivel
-        transform.position = new Vector3((float)-13.177, 0, 0);
+        transform.position = new Vector3(0, 0, 0);
         temp = Instantiate(firstBlock, transform.position, transform.rotation);
         SetGameState(GameState.InGame);
         //CameraFollow.SharedInstance.ResetCameraPosition();
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         CameraFollow cameraFollow = camera.GetComponent<CameraFollow>();
         cameraFollow.ResetCameraPosition();
-        //si el jugador no supera la distancia de 13 el primer bloque sera el mismo
-        // (PlayerController.SharedInstance.transform.position.x > 13)
-        //{
         LevelGenerator.SharedInstance.RemoveAllTheBlock();
         LevelGenerator.SharedInstance.GenerateInitialBlock();
-        //}
         //despues de generar el bloque genero el jugador
-        PlayerController.SharedInstance.StartGame();
+        PlayerController.sharedInstance.StartGame();
         this.CollectedObjects = 0f;
-
     }
+    
     //metodo para reiniciar el juego
     public void RestartGame()
     {
         SetGameState(GameState.InGame);
-        PlayerController.SharedInstance.StartGame();
+        PlayerController.sharedInstance.StartGame();
         LevelGenerator.SharedInstance.GenerateInitialBlock();
     }
+    
     //metodo que se llamara al morir
     public void GameOver()
     {
@@ -94,10 +93,10 @@ public class GameManager : MonoBehaviour
         LevelGenerator.SharedInstance.RemoveAllTheBlock();
         Destroy(temp);
     }
+    
     //metodo que llamara para volver al menu
     public void BackToMenu()
     {
-        //UnityEngine.Debug.Log(EstadoPausa);
         if (this.EstadoPausa == true)
         {
             Pause();
@@ -106,13 +105,14 @@ public class GameManager : MonoBehaviour
         {
             SetGameState(GameState.Menu);
         }
-        //UnityEngine.Debug.Log(EstadoPausa);
     }
+    
     //metodo que llamare para volver al juego desde las Opciones
     public void BackToGame()
     {
         SetGameState(GameState.InGame);
     }
+    
     public void Pause()
     {
         if (CurrentGameState != GameState.GameOver && CurrentGameState != GameState.Menu)
@@ -121,25 +121,29 @@ public class GameManager : MonoBehaviour
             this.EstadoPausa = true;
         }
     }
+    
     //metodo para continuar el juego
     public void ContinueGame()
     {
         SetGameState(GameState.InGame);
     }
+    
     //metodo para entrar al menu del juego desde el menu de inicio
     public void OptionGameInMenu()
     {
         SetGameState(GameState.Options);
     }
+    
     //metodo para finalizar la aplicacion
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
     }
+    
     //metodo encargado de cambiar el estado del juego
     private void SetGameState(GameState NewGameState)
     {
@@ -202,6 +206,5 @@ public class GameManager : MonoBehaviour
     public void CollectObject(float ObjectValue)
     {
         this.CollectedObjects += ObjectValue;
-        //UnityEngine.Debug.Log("recogimos : " + CollectedObjects);
     }
 }

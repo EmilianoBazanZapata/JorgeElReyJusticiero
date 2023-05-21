@@ -14,12 +14,13 @@ public class QualityManager : MonoBehaviour
         //el valor por defecto de la calidad es 3
         calidad = PlayerPrefs.GetInt("NumeroCalidad", 3);
     }
+
     public void AjustarClidad()
     {
-        //paso el valor de la calidad que concuerda con el cbo 
-        QualitySettings.SetQualityLevel(dropdown.value);
-        //actualizo la calidad del uego
+        UnityEngine.Debug.Log(dropdown.value);
+        // Cambiar el nivel de calidad
+        QualitySettings.SetQualityLevel(dropdown.value, true);
+        //actualizo la calidad del juego
         PlayerPrefs.SetInt("NumeroCalidad", dropdown.value);
-        calidad = dropdown.value;
     }
 }

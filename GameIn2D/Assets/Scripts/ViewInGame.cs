@@ -20,7 +20,7 @@ public class ViewInGame : MonoBehaviour
             //UnityEngine.Debug.Log(CurrentObjects);
             this.CollectableLabel.text = CurrentObjects.ToString();
             //mostrare la distancia recorrida
-            float TraveledDistance = PlayerController.SharedInstance.GetDistance();
+            float TraveledDistance = PlayerController.sharedInstance.GetDistance();
                                                                         //asi solo mostrare un deciaml
             this.DistanceLabel.text = "Distancia \n" + TraveledDistance.ToString("f1");
 

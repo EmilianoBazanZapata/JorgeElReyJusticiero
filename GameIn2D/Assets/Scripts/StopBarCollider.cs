@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class StopBarCollider : MonoBehaviour
 {
-    public Collider2D collider2D;
-     private void OnTriggerEnter2D(Collider2D collision)
+    public GameObject collider2D;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "King") 
+        if (collision.tag == "King")
         {
-            collider2D.enabled = true;
+            collider2D.SetActive(true);
         }
     }
 }
