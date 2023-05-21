@@ -293,7 +293,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31695326}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &40642269
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1886,7 +1886,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.2}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2200,7 +2200,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &636698064
 MonoBehaviour:
@@ -2602,7 +2602,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773685825}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &795749147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2766,7 +2766,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -2779,8 +2779,8 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 513
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3114,7 +3114,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 487830200}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.2
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3156,7 +3156,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905474612}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &948173748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,7 +3416,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038866775}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3920,7 +3920,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149935924}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4121,7 +4121,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153939229}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1166297847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4255,7 +4255,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166297847}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1200033739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4473,7 +4473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4766,7 +4766,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354511297}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1359893729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +4862,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5228,7 +5228,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428438628}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1436464406
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,7 +6196,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569299239}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1575938429
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,7 +6690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7005,7 +7005,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758199950}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1759440560
 GameObject:
   m_ObjectHideFlags: 0
@@ -7463,7 +7463,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899825314}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1925442419
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,7 +7749,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964433884}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1982469585
 GameObject:
   m_ObjectHideFlags: 0
