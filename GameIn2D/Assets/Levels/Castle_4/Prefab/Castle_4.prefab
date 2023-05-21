@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9159268982075326254}
   - component: {fileID: 2053784640344687384}
-  - component: {fileID: 7606186421204758546}
   m_Layer: 0
   m_Name: Medieval_tiles_free2_0
   m_TagString: Untagged
@@ -85,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7606186421204758546
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66510008357342307}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &78459450664969504
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4569880509593696614}
   - component: {fileID: 5512912846304157907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_tiles_free2_41
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +374,7 @@ GameObject:
   - component: {fileID: 2705072817272317724}
   - component: {fileID: 4690348398440782023}
   - component: {fileID: 9165962928650729914}
+  - component: {fileID: 7201076834551316022}
   m_Layer: 9
   m_Name: Medieval_tiles_free2_58 (1)
   m_TagString: Wall
@@ -500,6 +474,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 4.9584246, y: 4.6664095}
+  m_EdgeRadius: 0
+--- !u!61 &7201076834551316022
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269646707492706851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.965785, y: -0.09266329}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.302225, y: 1.1853266}
   m_EdgeRadius: 0
 --- !u!1 &389654008621981266
 GameObject:
@@ -738,9 +738,10 @@ GameObject:
   - component: {fileID: 1327353730703575757}
   - component: {fileID: 5024788330098943394}
   - component: {fileID: 1415837701288086450}
-  m_Layer: 0
+  - component: {fileID: 9149600688238805300}
+  m_Layer: 9
   m_Name: Medieval_tiles_free2_56
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,6 +838,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.265398, y: 4.406841}
+  m_EdgeRadius: 0
+--- !u!61 &9149600688238805300
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821590464147330421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06534195, y: -0.06302571}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1306839, y: 1.1260514}
   m_EdgeRadius: 0
 --- !u!1 &854875771795425914
 GameObject:
@@ -1698,7 +1725,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1473922202457228090}
   - component: {fileID: 2611006889933458018}
-  - component: {fileID: 2275587638191720551}
   m_Layer: 0
   m_Name: Medieval_tiles_free2_0 (1)
   m_TagString: Untagged
@@ -1773,32 +1799,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2275587638191720551
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2446508728875058853}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2519083941675808221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,9 +3708,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6889324034966393357}
   - component: {fileID: 6842080191633240794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_tiles_free2_36
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4562,7 +4562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6622932863094057152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55, y: 0, z: 0}
+  m_LocalPosition: {x: 60.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6741,7 +6741,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.5010977, y: 0}
+  m_Offset: {x: 4.5010986, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6752,7 +6752,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.002195, y: 1}
+  m_Size: {x: 30.232807, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6084550926438806592
 MonoBehaviour:
@@ -6861,6 +6861,7 @@ GameObject:
   - component: {fileID: 6973614040747760709}
   - component: {fileID: 6973614040747760714}
   - component: {fileID: 5516208046269480466}
+  - component: {fileID: 1257532012933898744}
   m_Layer: 9
   m_Name: Medieval_tiles_free2_58
   m_TagString: Wall
@@ -6960,6 +6961,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.297843, y: 3.8877034}
+  m_EdgeRadius: 0
+--- !u!61 &1257532012933898744
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973614040747760708}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.072806954, y: -0.09266329}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1456139, y: 1.1853266}
   m_EdgeRadius: 0
 --- !u!1 &6973614040758145838
 GameObject:
@@ -10608,9 +10635,9 @@ GameObject:
   m_Component:
   - component: {fileID: 716251446052769507}
   - component: {fileID: 3879336597858913714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_tiles_free2_41
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

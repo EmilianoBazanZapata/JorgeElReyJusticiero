@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     #region Variables
 
     [SerializeField] public float jumpForce = 5f;
-    [SerializeField] public float superJumpForce = 8f;
+    [SerializeField] public float superJumpForce = 5.5f;
     [SerializeField] public float runForce = 4.0f;
     [SerializeField] public float walkSpeed = 2f;
     [SerializeField] public float initialWalkSpeed = 2f;
@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
 
     private void SuperJump()
     {
-        rigidBody.AddForce(Vector2.up * superJumpForce, ForceMode2D.Impulse);
+        rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         manaPoints -= MANA_DECREASE;
         animatorPlayer.SetBool("IsGrounded", false);
         jumpsRemaining = 0;
