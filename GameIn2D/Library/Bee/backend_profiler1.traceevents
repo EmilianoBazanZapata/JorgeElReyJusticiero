@@ -1,0 +1,478 @@
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1684640340078902, "dur":3449, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640340082362, "dur":92, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1684640340082483, "dur":43, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1684640340082526, "dur":1254, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1684640340083845, "dur":2042, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640340085887, "dur":4, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341866918, "dur":199, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867117, "dur":472, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867589, "dur":90, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867679, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867695, "dur":8, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867703, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867719, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867723, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867734, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867738, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867749, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867753, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867766, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867770, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867783, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867786, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867801, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867805, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867815, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867818, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867830, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867834, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867844, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867848, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867859, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867887, "dur":4, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341867935, "dur":2303, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1684640340086590, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340086591, "dur":14808, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340101400, "dur":578, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1684640340101989, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340112350, "dur":6657, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1684640340119216, "dur":53017, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1684640340172249, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340172282, "dur":4362, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1684640340176820, "dur":83898, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340260729, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340260747, "dur":2165, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340263006, "dur":30585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340293597, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340293610, "dur":1249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340294913, "dur":290623, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340585544, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340585558, "dur":7198, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340592828, "dur":29508, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340622341, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640340622352, "dur":3549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640340625956, "dur":388978, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640341014940, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640341014952, "dur":1314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640341016334, "dur":579647, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640341595991, "dur":19, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1684640341596024, "dur":3461, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1684640341599556, "dur":267366, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340086004, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340086005, "dur":15401, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340101407, "dur":492, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1684640340101908, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340141026, "dur":4639, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1684640340145829, "dur":8759, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1684640340154602, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340154625, "dur":7275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1684640340162104, "dur":129543, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340291652, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340291662, "dur":3088, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340294807, "dur":95064, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340389881, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340389898, "dur":3758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340393727, "dur":124666, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340518400, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340518412, "dur":1724, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340520190, "dur":39531, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340559726, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340559737, "dur":1587, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340561386, "dur":46663, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340608055, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340608066, "dur":11269, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340619397, "dur":92020, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340711426, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340711444, "dur":1936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340713463, "dur":207547, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340921020, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340921035, "dur":1723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340922853, "dur":70533, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340993393, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640340993407, "dur":1186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640340994659, "dur":399346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640341394012, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1684640341394024, "dur":1582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1684640341395662, "dur":471269, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340085673, "dur":434, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340086107, "dur":15250, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340101383, "dur":133172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1684640340234567, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340236493, "dur":4954, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1684640340241608, "dur":52921, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640340294665, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340294678, "dur":1455, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640340296196, "dur":332464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640340628665, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640340628676, "dur":32090, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640340660859, "dur":427649, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640341088515, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640341088526, "dur":1444, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640341090025, "dur":362944, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640341452976, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1684640341452988, "dur":1995, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1684640341455039, "dur":411879, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340085126, "dur":910, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340086037, "dur":15336, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340101385, "dur":1774, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1684640340103171, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340109808, "dur":7048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1684640340117102, "dur":42029, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1684640340159153, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340159182, "dur":3284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1684640340162623, "dur":78607, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340241242, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340241567, "dur":2800, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340244505, "dur":36844, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340281357, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340281407, "dur":1326, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340282794, "dur":119680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340402481, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340402609, "dur":1255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340403916, "dur":35956, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340439882, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340439898, "dur":3129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340443107, "dur":37406, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340480522, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340480536, "dur":1899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340482523, "dur":101595, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340584126, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340584140, "dur":4011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340588240, "dur":32941, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340621187, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340621200, "dur":1353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340622611, "dur":40991, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340663608, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340663622, "dur":1443, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340665127, "dur":236623, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340901757, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640340901844, "dur":85663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640340987567, "dur":94336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341081910, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640341081923, "dur":1521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341083501, "dur":109281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341192791, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640341192808, "dur":3245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341196111, "dur":217093, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341413211, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1684640341413222, "dur":1298, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1684640341414573, "dur":452347, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340085386, "dur":692, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340086079, "dur":15290, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340101383, "dur":43478, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1684640340144872, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340144919, "dur":5040, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1684640340150111, "dur":194830, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340344947, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340344959, "dur":8336, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340353349, "dur":46923, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340400280, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340400294, "dur":1693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340402053, "dur":69649, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340471711, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340471728, "dur":1915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340473725, "dur":68709, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340542441, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340542457, "dur":1885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340544427, "dur":38975, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340583409, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340583424, "dur":2550, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340586056, "dur":36292, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340622353, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340622363, "dur":2277, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340624692, "dur":116291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340741000, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640340741016, "dur":2205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640340743333, "dur":544157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640341287497, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640341287508, "dur":6982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":5, "ts":1684640341294545, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":5, "ts":1684640341294604, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640341294613, "dur":15900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":5, "ts":1684640341310571, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1684640341310748, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640341310760, "dur":1371, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1684640341312214, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/resources.assets" }}
+,{ "pid":12345, "tid":5, "ts":1684640341312292, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640341312299, "dur":3196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/resources.assets" }}
+,{ "pid":12345, "tid":5, "ts":1684640341315548, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1684640341315708, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1684640341315717, "dur":1303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1684640341317089, "dur":549819, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340084878, "dur":1077, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340085969, "dur":15380, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340101382, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1684640340101404, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340105906, "dur":1312, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1684640340107234, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1684640340107433, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340108232, "dur":8119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1684640340116357, "dur":360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1684640340116823, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340119647, "dur":6343, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1684640340126144, "dur":417, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1684640340126573, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340126597, "dur":4425, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1684640340131243, "dur":386, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1684640340131641, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340131667, "dur":4402, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1684640340136241, "dur":79137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340215392, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340216165, "dur":12404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340228720, "dur":276482, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340505208, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340505221, "dur":1373, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340506646, "dur":46586, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340553238, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340553253, "dur":1869, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340555197, "dur":39766, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340595009, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340595023, "dur":1958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340597040, "dur":30236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340627283, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340627294, "dur":1295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340628648, "dur":117039, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340745694, "dur":17, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340745761, "dur":1700, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340747527, "dur":152314, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340899850, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640340899868, "dur":1969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640340901948, "dur":189329, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640341091282, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640341091294, "dur":1217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640341092563, "dur":266002, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640341358571, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1684640341358585, "dur":1719, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1684640341360363, "dur":506548, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340085978, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340085979, "dur":15497, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340101477, "dur":521, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1684640340102005, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340109999, "dur":6899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1684640340117201, "dur":701, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1684640340117915, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340118905, "dur":6838, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1684640340125911, "dur":456, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1684640340126379, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340126653, "dur":4564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1684640340131364, "dur":4331, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340135705, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340136381, "dur":3538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340140075, "dur":202372, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340342468, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340342477, "dur":51217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340393758, "dur":93827, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340487591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340487603, "dur":1425, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340489089, "dur":95234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340584330, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340584346, "dur":4177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340588610, "dur":274233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340862850, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640340862862, "dur":1848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640340864767, "dur":361277, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640341226050, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640341226063, "dur":3539, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640341229671, "dur":632676, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640341862354, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1684640341862369, "dur":4390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":7, "ts":1684640341866830, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":7, "ts":1684640341866835, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340086285, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340086286, "dur":15123, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340101411, "dur":43588, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":8, "ts":1684640340145010, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340145064, "dur":6026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":8, "ts":1684640340151269, "dur":88951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340240234, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340245972, "dur":5178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340251253, "dur":36049, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340287309, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340287321, "dur":1331, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340288711, "dur":152013, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340440732, "dur":91, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340441336, "dur":5295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340446709, "dur":38887, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340485603, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340485616, "dur":1304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340486978, "dur":32127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340519110, "dur":19, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340519138, "dur":4143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340523358, "dur":84423, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340607789, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340607807, "dur":1341, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340609202, "dur":103845, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340713054, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340713067, "dur":2538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340715692, "dur":267756, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340983455, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640340983467, "dur":1316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640340984847, "dur":282964, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640341267817, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640341267829, "dur":2545, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640341270645, "dur":102184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640341372874, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1684640341372887, "dur":1428, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1684640341374381, "dur":492519, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340086497, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340086499, "dur":14896, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340101397, "dur":763, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1684640340102173, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340143526, "dur":6523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1684640340150263, "dur":77433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340227786, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340228650, "dur":3666, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340232477, "dur":56138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340288621, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340288633, "dur":2605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340291307, "dur":24879, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340316192, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340316204, "dur":1490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340317749, "dur":90738, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340408493, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340408503, "dur":34565, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340443148, "dur":85752, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340528910, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340528927, "dur":2052, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340531058, "dur":279125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340810192, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640340810220, "dur":1935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640340812232, "dur":429673, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640341241913, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640341241926, "dur":4582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640341246562, "dur":601918, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640341848526, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1684640341848542, "dur":2000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1684640341850609, "dur":16304, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340086849, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340086851, "dur":14539, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340101392, "dur":42661, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1684640340144066, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340144120, "dur":4490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1684640340148778, "dur":2396, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero.exe" }}
+,{ "pid":12345, "tid":10, "ts":1684640340151189, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340151211, "dur":5140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero.exe" }}
+,{ "pid":12345, "tid":10, "ts":1684640340156514, "dur":141341, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340297861, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340297874, "dur":3113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340301045, "dur":37662, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340338714, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340338761, "dur":1815, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340340625, "dur":218395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340559028, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340559041, "dur":1718, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340560816, "dur":152070, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340712894, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640340712909, "dur":2620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640340715604, "dur":572921, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640341288529, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640341288539, "dur":2135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":10, "ts":1684640341290739, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1684640341290810, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640341291194, "dur":4626, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1684640341295882, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1684640341295942, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640341295950, "dur":14985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1684640341311021, "dur":1447, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":10, "ts":1684640341312472, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640341312480, "dur":1535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":10, "ts":1684640341314073, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":10, "ts":1684640341314128, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1684640341314138, "dur":1963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":10, "ts":1684640341316179, "dur":550754, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340087130, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340087131, "dur":14272, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340101405, "dur":56253, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1684640340157671, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340157744, "dur":3239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1684640340161163, "dur":128774, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340289943, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340289954, "dur":1298, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340291319, "dur":54066, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340345400, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340345408, "dur":1178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340346637, "dur":104653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340451297, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340451310, "dur":1431, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340452811, "dur":41026, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340493843, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340493855, "dur":1193, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340495102, "dur":35703, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340530813, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340530874, "dur":10816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340541769, "dur":41601, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340583381, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340583398, "dur":2441, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340585923, "dur":48179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340634108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340634119, "dur":1159, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340635328, "dur":179053, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340814388, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640340814403, "dur":1680, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640340816156, "dur":409234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640341225398, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341225413, "dur":2445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640341227924, "dur":75952, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640341303885, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341303900, "dur":4011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1684640341308569, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":11, "ts":1684640341308673, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341308705, "dur":3171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":11, "ts":1684640341311928, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":11, "ts":1684640341311983, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341311991, "dur":1425, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":11, "ts":1684640341313502, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/level0" }}
+,{ "pid":12345, "tid":11, "ts":1684640341313588, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341313601, "dur":1401, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/level0" }}
+,{ "pid":12345, "tid":11, "ts":1684640341315056, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":11, "ts":1684640341315110, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1684640341315117, "dur":1582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":11, "ts":1684640341316750, "dur":550154, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340087410, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340087411, "dur":13954, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340101384, "dur":1206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":12, "ts":1684640340102600, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340143734, "dur":5063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":12, "ts":1684640340148968, "dur":359, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":12, "ts":1684640340149338, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340150579, "dur":14470, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":12, "ts":1684640340165198, "dur":117882, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340283085, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340283097, "dur":1323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340284487, "dur":26714, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340311208, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340311221, "dur":1224, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340312496, "dur":94956, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340407458, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340407471, "dur":1302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340408830, "dur":41084, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340449922, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340449938, "dur":1615, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340451626, "dur":36287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340487919, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340487930, "dur":1793, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340489783, "dur":61627, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340551418, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340551434, "dur":1502, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340553003, "dur":44352, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340597360, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340597373, "dur":1540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340598977, "dur":29945, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340628927, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340628937, "dur":1115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340630103, "dur":60388, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340690501, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340690518, "dur":1821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340692404, "dur":189681, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340882093, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640340882105, "dur":1299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640340883460, "dur":189923, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640341073394, "dur":8, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640341073414, "dur":2824, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640341076311, "dur":311760, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640341388078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1684640341388089, "dur":2406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Emiliano/Desktop/Unity_Game_Portable/Jorge El rey justiciero_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1684640341390552, "dur":476373, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1684640341872737, "dur":4619, "ph":"X", "name": "ProfilerWriteOutput" }
+,
