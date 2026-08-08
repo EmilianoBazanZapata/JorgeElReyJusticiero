@@ -28,6 +28,7 @@ public sealed class PlayerMovement : MonoBehaviour
     private int jumpsRemaining = 2;
 
     public bool IsGrounded => isTouchingGround;
+    public bool IsMoving { get; private set; }
     public float VerticalVelocity => rigidBody.linearVelocity.y;
 
     private void Awake()
@@ -58,8 +59,9 @@ public sealed class PlayerMovement : MonoBehaviour
     public void FixedTick(float direction)
     {
         bool collidingWithWall = CollisionWall(direction);
+        IsMoving = direction != 0 && !collidingWithWall;
 
-        if (direction != 0 && !collidingWithWall)
+        if (IsMoving)
         {
             float targetVelocityX = direction * walkSpeed;
             float velocityChangeX = targetVelocityX - rigidBody.linearVelocity.x;

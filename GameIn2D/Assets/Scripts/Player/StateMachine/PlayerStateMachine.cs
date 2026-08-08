@@ -62,7 +62,7 @@ public sealed class PlayerStateMachine : MonoBehaviour
 
         float horizontalMovement = inputReader.ReadHorizontalMovement();
         playerMovement.FixedTick(horizontalMovement);
-        EvaluateLocomotionState(horizontalMovement);
+        EvaluateLocomotionState();
     }
 
     public void ResetState()
@@ -80,7 +80,7 @@ public sealed class PlayerStateMachine : MonoBehaviour
         }
     }
 
-    private void EvaluateLocomotionState(float horizontalMovement)
+    private void EvaluateLocomotionState()
     {
         if (!playerMovement.IsGrounded)
         {
@@ -90,7 +90,7 @@ public sealed class PlayerStateMachine : MonoBehaviour
             return;
         }
 
-        ChangeState(horizontalMovement != 0f
+        ChangeState(playerMovement.IsMoving
             ? PlayerStateId.Run
             : PlayerStateId.Idle);
     }
