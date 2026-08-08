@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(PlayerHealth), typeof(PlayerMana))]
 public class PlayerController : MonoBehaviour
 {
     #region Variables
@@ -15,15 +16,11 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider2d;
     private Rigidbody2D rigidBody;
     private UnityEngine.Vector3 startPosition;
-    private float healtPoints, manaPoints;
+    private PlayerHealth playerHealth;
+    private PlayerMana playerMana;
     private bool isTouchingGround = false;
     private bool isCollidingWall = false;
 
-    private const int INITIAL_HEALT = 90;
-    private const int INITIAL_MANA = 90;
-    private const int MAX_HEALTH = 100;
-    private const int MAX_MANA = 100;
-    private const int MANA_DECRASE = 5;
     private const float MANA_DECREASE_DELAY = 100;
     private const float MANA_DECREASE_AMOUNT = 0.5f;
     private const int MANA_DECREASE = 5;
@@ -48,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
         rigidBody = GetComponent<Rigidbody2D>();
         boxCollider2d = GetComponent<BoxCollider2D>();
+        playerHealth = GetComponent<PlayerHealth>();
+        playerMana = GetComponent<PlayerMana>();
         startPosition = transform.position;
     }
 
@@ -62,8 +61,8 @@ public class PlayerController : MonoBehaviour
         animatorPlayer.SetBool("IsGrounded", true);
         animatorPlayer.SetBool("Walk", false);
         this.transform.position = startPosition;
-        healtPoints = INITIAL_HEALT;
-        manaPoints = INITIAL_MANA;
+        playerHealth.ResetHealth();
+        playerMana.ResetMana();
     }
 
     private void Update()
@@ -77,7 +76,7 @@ public class PlayerController : MonoBehaviour
             {
                 Jump();
             }
-            else if (jumpsRemaining > 0 && manaPoints > 0)
+            else if (jumpsRemaining > 0 && playerMana.HasMana)
             {
                 SuperJump();
             }
@@ -131,10 +130,10 @@ public class PlayerController : MonoBehaviour
 
     private void SuperRun()
     {
-        if (Input.GetButton("SuperRun") && manaPoints > 0)
+        if (Input.GetButton("SuperRun") && playerMana.HasMana)
         {
             walkSpeed = runForce;
-            manaPoints -= MANA_DECREASE_AMOUNT;
+            playerMana.Consume(MANA_DECREASE_AMOUNT);
             Invoke("DecreaseMana", MANA_DECREASE_DELAY);
         }
         else
@@ -158,7 +157,7 @@ public class PlayerController : MonoBehaviour
     private void SuperJump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        manaPoints -= MANA_DECREASE;
+        playerMana.Consume(MANA_DECREASE);
         animatorPlayer.SetBool("IsGrounded", false);
         jumpsRemaining = 0;
     }
@@ -192,32 +191,28 @@ public class PlayerController : MonoBehaviour
 
     public void CollectHealt(int points)
     {
-        this.healtPoints = (this.healtPoints + points > MAX_HEALTH) ? MAX_HEALTH : this.healtPoints + points;
+        playerHealth.Recover(points);
     }
 
     public void CollectMana(int points)
     {
-        this.manaPoints += points;
-        if (this.manaPoints >= MAX_MANA)
-        {
-            this.manaPoints = MAX_MANA;
-        }
+        playerMana.Recover(points);
     }
 
     public float GetHealth()
     {
-        return this.healtPoints;
+        return playerHealth.CurrentHealth;
     }
 
     public float GetMana()
     {
-        return this.manaPoints;
+        return playerMana.CurrentMana;
     }
 
     private void RemoveMana()
     {
-        manaPoints -= MANA_DECRASE;
-        if (manaPoints <= 0)
+        playerMana.Consume(MANA_DECREASE);
+        if (!playerMana.HasMana)
         {
             CancelInvoke("RemoveMana");
         }
@@ -227,8 +222,8 @@ public class PlayerController : MonoBehaviour
     {
         if (otherCollider.CompareTag("Enemy"))
         {
-            this.healtPoints -= 20;
-            if (this.healtPoints <= 0)
+            playerHealth.ReceiveDamage(20);
+            if (playerHealth.IsDead)
             {
                 Kill();
             }
