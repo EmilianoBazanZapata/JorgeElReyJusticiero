@@ -1365,22 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8700a7b110f05aa4186d7b663595800c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  superJumpForce: 8
-  runForce: 4
-  walkSpeed: 2
-  initialWalkSpeed: 2
-  animatorPlayer: {fileID: 339903841}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
   boxCollider2d: {fileID: 339903852}
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  PlatformLayer:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!1 &352246458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1643,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: superJumpForce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: runForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: initialWalkSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: animatorPlayer
+      value:
+      objectReference: {fileID: 339903841}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: GroundLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640832422195317133, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+        type: 3}
+      propertyPath: PlatformLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 2654009571224201042, guid: 9d30bb072baa5cd40ba7957cdd793df7,
         type: 3}
       propertyPath: m_Enabled

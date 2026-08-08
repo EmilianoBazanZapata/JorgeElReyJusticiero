@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2654009571224201042}
   - component: {fileID: 7640832422195317130}
   - component: {fileID: 7640832422195317131}
+  - component: {fileID: 7640832422195317132}
+  - component: {fileID: 7640832422195317133}
   m_Layer: 0
   m_Name: King
   m_TagString: Untagged
@@ -170,23 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8700a7b110f05aa4186d7b663595800c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  superJumpForce: 8
-  runForce: 21.59
   boxCollider2d: {fileID: 7187795140310477491}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  animatorPlayer: {fileID: 5568723230932018613}
-  distanceLayer: 0.2
-  walkSpeed: 2.94
-  boxWidth: 1
-  boxHeight: 1
-  Collider2D: {fileID: 7187795140310477491}
-  boxSize: {x: 0.5, y: 1}
 --- !u!114 &7640832422195317130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +201,42 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   initialMana: 90
   maximumMana: 100
+--- !u!114 &7640832422195317132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568723230932018614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d24df032aa4dd39ee2deba5c005c37, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &7640832422195317133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568723230932018614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840e2f53eff848bf85e40992534b1ea1, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  jumpForce: 5
+  superJumpForce: 8
+  runForce: 21.59
+  walkSpeed: 2.94
+  initialWalkSpeed: 2
+  animatorPlayer: {fileID: 5568723230932018613}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  PlatformLayer:
+    serializedVersion: 2
+    m_Bits: 0
