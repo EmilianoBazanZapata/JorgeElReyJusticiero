@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         }
         if (GameManager.SharedInstance.CurrentGameState == GameState.InGame)
         {
-            rigidBody.velocity = new Vector2(currentRunningSpeed, rigidBody.velocity.y);
+            rigidBody.linearVelocity = new Vector2(currentRunningSpeed, rigidBody.linearVelocity.y);
         }
 
 
