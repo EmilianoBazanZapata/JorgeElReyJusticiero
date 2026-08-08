@@ -2,33 +2,39 @@
 # Unity generated folders
 # =========================================================
 
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Mm]emoryCaptures/
-/[Rr]ecordings/
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
 
 # Local build outputs
-/[Bb]uild/
-/[Bb]uilds/
-/[Bb]uildOutput/
-/[Dd]ist/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Bb]uildOutput/
+**/[Dd]ist/
 
-# Unity cache server
-/[Cc]acheServer/
+# Unity cache / generated build data
+**/[Cc]acheServer/
+**/[Bb]ee/
+**/[Bb]urst[Dd]ebug[Ii]nformation/
+**/[Ii]l2cpp[Bb]uild[Cc]ache/
+**/[Aa]rtifacts/
 
 # =========================================================
 # Unity generated files
 # =========================================================
 
 sysinfo.txt
+
 *.pidb
 *.pdb
 *.mdb
 *.opendb
 *.VC.db
+
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
@@ -41,18 +47,20 @@ crashlytics-build.properties
 UnityLockfile
 
 # =========================================================
-# Keep valid Unity meta files
+# Unity metadata
 # =========================================================
 
-# Meta files must generally be committed with their assets.
-!/[Aa]ssets/**/*.meta
-!/[Pp]ackages/**/*.meta
+# Unity .meta files should normally be committed together
+# with their corresponding Assets / Packages content.
+#
+# Do NOT globally ignore *.meta files.
 
 # =========================================================
 # Visual Studio
 # =========================================================
 
 .vs/
+
 *.csproj
 *.csproj.user
 *.unityproj
@@ -72,15 +80,15 @@ UnityLockfile
 *.VC.db
 
 # Visual Studio build artifacts
-[Bb]in/
-[Oo]bj/
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Rr]elease/
+**/x64/
+**/x86/
 
 # Test results
-TestResults/
+**/TestResults/
 *.trx
 *.coverage
 *.coveragexml
@@ -93,13 +101,15 @@ TestResults/
 *.sln.iml
 
 # Rider Unity plugin generated files
-/[Aa]ssets/Plugins/Editor/JetBrains*
+**/[Aa]ssets/Plugins/Editor/JetBrains*
 
 # =========================================================
 # Visual Studio Code
 # =========================================================
 
-# Keep this commented if you want to share workspace settings.
+# Uncomment this line if you do not want to version
+# shared VS Code workspace settings.
+#
 # .vscode/
 
 .vscode/*.log
@@ -111,7 +121,7 @@ TestResults/
 # =========================================================
 
 .consulo/
-ExportedObj/
+**/ExportedObj/
 *.userprefs
 
 # =========================================================
@@ -141,7 +151,7 @@ Icon?
 
 # Linux
 *~
-.directory
+*.directory
 .Trash-*
 .nfs*
 
@@ -154,7 +164,6 @@ Icon?
 local.properties
 
 # Android Studio
-.idea/
 *.iml
 captures/
 .externalNativeBuild/
@@ -188,43 +197,38 @@ xcuserdata/
 *.unitypackage
 
 # Asset Store tools
-/[Aa]ssets/AssetStoreTools*
+**/[Aa]ssets/AssetStoreTools*
 
 # Generated JetBrains plugin
-/[Aa]ssets/Plugins/Editor/JetBrains*
+**/[Aa]ssets/Plugins/Editor/JetBrains*
 
 # =========================================================
 # Addressables
 # =========================================================
 
 # Generated Addressables content
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+**/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated StreamingAssets content
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/
+**/[Aa]ssets/[Ss]treamingAssets/aa.meta
+**/[Aa]ssets/[Ss]treamingAssets/aa/
 
 # Server data / local Addressables builds
-/[Ss]erver[Dd]ata/
-/[Aa]ssets/[Ss]treamingAssets/[Aa]a/
-
-# =========================================================
-# Burst / IL2CPP / Bee
-# =========================================================
-
-/[Bb]ee/
-/[Bb]urst[Dd]ebug[Ii]nformation/
-/[Ii]l2cpp[Bb]uild[Cc]ache/
-/[Aa]rtifacts/
+**/[Ss]erver[Dd]ata/
+**/[Aa]ssets/[Ss]treamingAssets/[Aa]a/
 
 # =========================================================
 # Unity Package Manager
 # =========================================================
 
-# Keep Packages/manifest.json and packages-lock.json committed.
-# Ignore package caches if generated locally.
-/[Pp]ackages/packages-lock.json.tmp
-/[Pp]ackages/.cache/
+# IMPORTANT:
+# Keep these committed:
+#
+# Packages/manifest.json
+# Packages/packages-lock.json
+
+**/[Pp]ackages/packages-lock.json.tmp
+**/[Pp]ackages/.cache/
 
 # =========================================================
 # NuGet
@@ -233,7 +237,9 @@ xcuserdata/
 packages/
 *.nupkg
 *.snupkg
+
 .nuget/
+
 project.assets.json
 project.nuget.cache
 *.csproj.nuget.*
@@ -266,7 +272,8 @@ project.nuget.cache
 *.tar
 *.tar.gz
 
-# Uncomment these if you intentionally keep archives in the repo.
+# Uncomment if you intentionally store archives in Docs:
+#
 # !/Docs/**/*.zip
 
 # =========================================================
@@ -294,10 +301,10 @@ GoogleService-Info.plist
 serviceAccountKey.json
 firebase-adminsdk*.json
 
-# Uncomment these exceptions if the app intentionally requires
-# Firebase config files to be versioned.
-# !/[Aa]ssets/Plugins/Android/google-services.json
-# !/[Aa]ssets/GoogleService-Info.plist
+# Uncomment these only if the project intentionally versions them:
+#
+# !**/[Aa]ssets/Plugins/Android/google-services.json
+# !**/[Aa]ssets/GoogleService-Info.plist
 
 # =========================================================
 # Profiling and diagnostics
@@ -325,8 +332,9 @@ latex/
 # Optional large source assets
 # =========================================================
 
-# Do not enable these blindly if these are source assets used by Unity.
-# Prefer Git LFS instead for large binary assets.
+# Do NOT enable these blindly.
+# Unity source assets may legitimately need to be committed.
+# Prefer Git LFS for large binary assets.
 #
 # *.psd
 # *.blend
