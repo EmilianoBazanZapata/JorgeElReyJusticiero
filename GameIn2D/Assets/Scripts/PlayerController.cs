@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (direction != 0 && !isCollidingWall)
         {
             float targetVelocityX = direction * walkSpeed;
-            float velocityChangeX = targetVelocityX - rigidBody.velocity.x;
+            float velocityChangeX = targetVelocityX - rigidBody.linearVelocity.x;
             rigidBody.AddForce(new UnityEngine.Vector2(velocityChangeX, 0), ForceMode2D.Impulse);
             transform.localScale = new UnityEngine.Vector2(direction, 1);
             animatorPlayer.SetBool("Walk", true);
