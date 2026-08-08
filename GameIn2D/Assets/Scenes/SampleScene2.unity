@@ -1353,6 +1353,18 @@ BoxCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 427117447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &339903859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7640832422195317134, guid: 9d30bb072baa5cd40ba7957cdd793df7,
+    type: 3}
+  m_PrefabInstance: {fileID: 427117447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef6e297c98b48bc8691206f77092a95, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &339903858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,7 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8700a7b110f05aa4186d7b663595800c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider2d: {fileID: 339903852}
 --- !u!1 &352246458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,6 +8237,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
+        type: 3}
+      propertyPath: playerDeathController
+      value:
+      objectReference: {fileID: 339903859}
     - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
         type: 3}
       propertyPath: Canvas

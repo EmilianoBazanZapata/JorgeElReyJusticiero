@@ -17,6 +17,8 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private PlayerDeathController playerDeathController;
+
     public GameObject firstBlock;
     GameObject temp;
 
@@ -44,6 +46,22 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SharedInstance = this;
+    }
+
+    private void OnEnable()
+    {
+        if (playerDeathController != null)
+        {
+            playerDeathController.Died += GameOver;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (playerDeathController != null)
+        {
+            playerDeathController.Died -= GameOver;
+        }
     }
     
     private void Start()

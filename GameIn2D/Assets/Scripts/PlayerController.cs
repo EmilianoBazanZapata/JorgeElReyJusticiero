@@ -2,15 +2,15 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerHealth), typeof(PlayerMana))]
 [RequireComponent(typeof(PlayerInputReader), typeof(PlayerMovement))]
+[RequireComponent(typeof(PlayerDeathController))]
 public class PlayerController : MonoBehaviour
 {
-    public BoxCollider2D boxCollider2d;
-
     private Vector3 startPosition;
     private PlayerHealth playerHealth;
     private PlayerMana playerMana;
     private PlayerInputReader inputReader;
     private PlayerMovement playerMovement;
+    private PlayerDeathController playerDeathController;
 
     public static PlayerController sharedInstance;
 
@@ -25,11 +25,11 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        boxCollider2d = GetComponent<BoxCollider2D>();
         playerHealth = GetComponent<PlayerHealth>();
         playerMana = GetComponent<PlayerMana>();
         inputReader = GetComponent<PlayerInputReader>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerDeathController = GetComponent<PlayerDeathController>();
         startPosition = transform.position;
     }
 
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startPosition;
         playerHealth.ResetHealth();
         playerMana.ResetMana();
+        playerDeathController.ResetDeathState();
     }
 
     private void Update()
@@ -59,17 +60,6 @@ public class PlayerController : MonoBehaviour
         if (GameManager.SharedInstance.CurrentGameState != GameState.InGame) return;
 
         playerMovement.FixedTick();
-    }
-
-    public void Kill()
-    {
-        GameManager.SharedInstance.GameOver();
-        float CurrentMaxDistance = PlayerPrefs.GetFloat("MaxDistance", 0);
-
-        if (CurrentMaxDistance < GetDistance())
-            PlayerPrefs.SetFloat("MaxDistance", GetDistance());
-
-        boxCollider2d.isTrigger = false;
     }
 
     public float GetDistance()
@@ -103,10 +93,6 @@ public class PlayerController : MonoBehaviour
         if (otherCollider.CompareTag("Enemy"))
         {
             playerHealth.ReceiveDamage(20);
-            if (playerHealth.IsDead)
-            {
-                Kill();
-            }
         }
     }
 }

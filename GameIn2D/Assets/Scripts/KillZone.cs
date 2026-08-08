@@ -6,10 +6,10 @@ public class KillZone : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "King") 
+        if (collision.CompareTag("King"))
         {
             //metodo que matara al jugador
-            PlayerController.sharedInstance.Kill();
+            collision.GetComponent<PlayerDeathController>().Die();
         }
     }
 }
