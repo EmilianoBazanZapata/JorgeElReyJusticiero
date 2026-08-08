@@ -3,14 +3,15 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerHealth), typeof(PlayerMana))]
 [RequireComponent(typeof(PlayerInputReader), typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerDeathController))]
+[RequireComponent(typeof(PlayerStateMachine))]
 public class PlayerController : MonoBehaviour
 {
     private Vector3 startPosition;
     private PlayerHealth playerHealth;
     private PlayerMana playerMana;
-    private PlayerInputReader inputReader;
     private PlayerMovement playerMovement;
     private PlayerDeathController playerDeathController;
+    private PlayerStateMachine playerStateMachine;
 
     public static PlayerController sharedInstance;
 
@@ -27,9 +28,9 @@ public class PlayerController : MonoBehaviour
 
         playerHealth = GetComponent<PlayerHealth>();
         playerMana = GetComponent<PlayerMana>();
-        inputReader = GetComponent<PlayerInputReader>();
         playerMovement = GetComponent<PlayerMovement>();
         playerDeathController = GetComponent<PlayerDeathController>();
+        playerStateMachine = GetComponent<PlayerStateMachine>();
         startPosition = transform.position;
     }
 
@@ -45,21 +46,21 @@ public class PlayerController : MonoBehaviour
         playerHealth.ResetHealth();
         playerMana.ResetMana();
         playerDeathController.ResetDeathState();
+        playerStateMachine.ResetState();
     }
 
     private void Update()
     {
         if (GameManager.SharedInstance.CurrentGameState != GameState.InGame) return;
 
-        inputReader.ReadInput();
-        playerMovement.Tick();
+        playerStateMachine.Tick();
     }
 
     private void FixedUpdate()
     {
         if (GameManager.SharedInstance.CurrentGameState != GameState.InGame) return;
 
-        playerMovement.FixedTick();
+        playerStateMachine.FixedTick();
     }
 
     public float GetDistance()

@@ -27,6 +27,9 @@ public sealed class PlayerMovement : MonoBehaviour
     private bool isCollidingWall;
     private int jumpsRemaining = 2;
 
+    public bool IsGrounded => isTouchingGround;
+    public float VerticalVelocity => rigidBody.linearVelocity.y;
+
     private void Awake()
     {
         inputReader = GetComponent<PlayerInputReader>();
@@ -52,9 +55,8 @@ public sealed class PlayerMovement : MonoBehaviour
         SuperRun();
     }
 
-    public void FixedTick()
+    public void FixedTick(float direction)
     {
-        float direction = inputReader.ReadHorizontalMovement();
         bool collidingWithWall = CollisionWall(direction);
 
         if (direction != 0 && !collidingWithWall)
