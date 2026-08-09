@@ -2,14 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CollectableType
-{
-    HealtPotion,
-    ManaPotion,
-    Money
-}
-
-
 public class Collectable : MonoBehaviour
 {
     public CollectableType Type;
@@ -48,23 +40,27 @@ public class Collectable : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "King")
+        if (other.CompareTag("King"))
         {
             Collect();
-            //pasamos el valor de loa moneda al metodo contador 
-            switch (this.Type)
-            {
-                case CollectableType.Money:
-                    GameManager.SharedInstance.CollectObject(value);
-                    break;
-                case CollectableType.HealtPotion:
-                    PlayerController.sharedInstance.CollectHealt(value);
-                    break;
-                case CollectableType.ManaPotion:
-                    PlayerController.sharedInstance.CollectMana(value);
-                    break;
-            }
+            ApplyEffect(other);
+        }
+    }
 
+    private void ApplyEffect(Collider2D playerCollider)
+    {
+        //pasamos el valor de loa moneda al metodo contador
+        switch (this.Type)
+        {
+            case CollectableType.Money:
+                GameManager.SharedInstance.CollectObject(value);
+                break;
+            case CollectableType.HealtPotion:
+                playerCollider.GetComponent<PlayerHealth>().Recover(value);
+                break;
+            case CollectableType.ManaPotion:
+                playerCollider.GetComponent<PlayerMana>().Recover(value);
+                break;
         }
     }
 }
