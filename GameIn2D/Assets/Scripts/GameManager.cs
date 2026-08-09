@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerDeathController playerDeathController;
     [SerializeField] private LevelGenerator levelGenerator;
+    [SerializeField] private CameraFollow cameraFollow;
 
     private GameFlowController gameFlowController;
 
@@ -73,9 +74,6 @@ public class GameManager : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
         levelGenerator.BeginRun(transform.position, transform.rotation);
         gameFlowController.StartGame();
-        //CameraFollow.SharedInstance.ResetCameraPosition();
-        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
-        CameraFollow cameraFollow = camera.GetComponent<CameraFollow>();
         cameraFollow.ResetCameraPosition();
         levelGenerator.StartGeneration();
         //despues de generar el bloque genero el jugador

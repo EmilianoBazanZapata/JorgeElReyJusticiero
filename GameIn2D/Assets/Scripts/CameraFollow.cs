@@ -12,12 +12,9 @@ public class CameraFollow : MonoBehaviour
 
     public Vector3 Velocity = Vector3.zero;
 
-    public static CameraFollow SharedInstance;
-
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        SharedInstance = this;
     }
     private void Update()
     {

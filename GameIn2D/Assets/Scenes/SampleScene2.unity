@@ -8292,6 +8292,11 @@ PrefabInstance:
       objectReference: {fileID: 356428117}
     - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
         type: 3}
+      propertyPath: cameraFollow
+      value:
+      objectReference: {fileID: 296658992}
+    - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
+        type: 3}
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 1038866779}
