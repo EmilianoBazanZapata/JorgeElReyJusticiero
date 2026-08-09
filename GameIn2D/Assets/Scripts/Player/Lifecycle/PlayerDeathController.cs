@@ -2,11 +2,11 @@ using System;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(PlayerHealth), typeof(PlayerController), typeof(BoxCollider2D))]
+[RequireComponent(typeof(PlayerHealth), typeof(PlayerProgressTracker), typeof(BoxCollider2D))]
 public sealed class PlayerDeathController : MonoBehaviour
 {
     private PlayerHealth playerHealth;
-    private PlayerController playerController;
+    private PlayerProgressTracker playerProgressTracker;
     private BoxCollider2D boxCollider2d;
 
     public event Action Died;
@@ -16,7 +16,7 @@ public sealed class PlayerDeathController : MonoBehaviour
     private void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
-        playerController = GetComponent<PlayerController>();
+        playerProgressTracker = GetComponent<PlayerProgressTracker>();
         boxCollider2d = GetComponent<BoxCollider2D>();
     }
 
@@ -41,9 +41,9 @@ public sealed class PlayerDeathController : MonoBehaviour
         Died?.Invoke();
 
         float currentMaxDistance = PlayerPrefs.GetFloat("MaxDistance", 0);
-        if (currentMaxDistance < playerController.GetDistance())
+        if (currentMaxDistance < playerProgressTracker.CurrentDistance)
         {
-            PlayerPrefs.SetFloat("MaxDistance", playerController.GetDistance());
+            PlayerPrefs.SetFloat("MaxDistance", playerProgressTracker.CurrentDistance);
         }
 
         boxCollider2d.isTrigger = false;

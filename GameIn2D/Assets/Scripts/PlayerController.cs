@@ -4,14 +4,15 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInputReader), typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerDeathController))]
 [RequireComponent(typeof(PlayerStateMachine))]
+[RequireComponent(typeof(PlayerProgressTracker))]
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 startPosition;
     private PlayerHealth playerHealth;
     private PlayerMana playerMana;
     private PlayerMovement playerMovement;
     private PlayerDeathController playerDeathController;
     private PlayerStateMachine playerStateMachine;
+    private PlayerProgressTracker playerProgressTracker;
 
     public static PlayerController sharedInstance;
 
@@ -31,18 +32,13 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         playerDeathController = GetComponent<PlayerDeathController>();
         playerStateMachine = GetComponent<PlayerStateMachine>();
-        startPosition = transform.position;
-    }
-
-    private void Start()
-    {
-        startPosition = transform.position;
+        playerProgressTracker = GetComponent<PlayerProgressTracker>();
     }
 
     public void StartGame()
     {
         playerMovement.ResetAnimationState();
-        transform.position = startPosition;
+        playerProgressTracker.ResetProgress();
         playerHealth.ResetHealth();
         playerMana.ResetMana();
         playerDeathController.ResetDeathState();
@@ -65,8 +61,7 @@ public class PlayerController : MonoBehaviour
 
     public float GetDistance()
     {
-        float traveledDistance = Mathf.Abs(transform.position.x - startPosition.x);
-        return traveledDistance;
+        return playerProgressTracker.CurrentDistance;
     }
 
     public void CollectHealt(int points)
