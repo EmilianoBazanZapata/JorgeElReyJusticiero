@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a185fa641c3127241ad133a0b2715e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstBlock: {fileID: 5480756654741441263, guid: 38a640951f7186f4ba3b2f5cf7455ab8, type: 3}
   AllTheLevelBlocks:
   - {fileID: 8973878587654439696, guid: ea17e10fd7c888e4cb0f9289842e339e, type: 3}
   - {fileID: 1077443125889831893, guid: 25dc8b4d5d13dec4d948427c06352136, type: 3}
@@ -8244,6 +8245,11 @@ PrefabInstance:
       objectReference: {fileID: 339903859}
     - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
         type: 3}
+      propertyPath: levelGenerator
+      value:
+      objectReference: {fileID: 356428117}
+    - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
+        type: 3}
       propertyPath: Canvas
       value: 
       objectReference: {fileID: 1038866779}
@@ -8257,12 +8263,6 @@ PrefabInstance:
       propertyPath: MenuCanvas
       value: 
       objectReference: {fileID: 1038866779}
-    - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
-        type: 3}
-      propertyPath: firstBlock
-      value: 
-      objectReference: {fileID: 5480756654741441263, guid: 38a640951f7186f4ba3b2f5cf7455ab8,
-        type: 3}
     - target: {fileID: 4175381397641331930, guid: c78c2c8bf9a74e44db6a9e84f148fefd,
         type: 3}
       propertyPath: PauseCanvas

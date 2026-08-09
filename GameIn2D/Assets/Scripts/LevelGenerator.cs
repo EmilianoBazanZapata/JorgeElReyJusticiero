@@ -1,67 +1,93 @@
-﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public static LevelGenerator SharedInstance;
+    [SerializeField] private GameObject firstBlock;
+
     public List<LevelBlock> AllTheLevelBlocks = new List<LevelBlock>();
     public Transform LevelStartPoint;
     public List<LevelBlock> CurrentBlocks = new List<LevelBlock>();
 
-    private void Awake()
-    {
-        SharedInstance = this;
-    }
+    private GameObject currentFirstBlock;
+
     private void Start()
     {
-       GenerateInitialBlock();
+        GenerateInitialBlocks();
     }
-    public void GenerateInitialBlock()
+
+    public void BeginRun(Vector3 firstBlockPosition, Quaternion firstBlockRotation)
+    {
+        currentFirstBlock = Instantiate(firstBlock, firstBlockPosition, firstBlockRotation);
+    }
+
+    public void StartGeneration()
+    {
+        RemoveAllBlocks();
+        GenerateInitialBlocks();
+    }
+
+    public void RestartRun()
+    {
+        GenerateInitialBlocks();
+    }
+
+    public void EndRun()
+    {
+        RemoveAllBlocks();
+        Destroy(currentFirstBlock);
+    }
+
+    public void AdvanceGeneration()
+    {
+        GenerateNextBlock();
+        RemoveOldestBlock();
+    }
+
+    private void GenerateInitialBlocks()
     {
         for (int i = 0; i < 4; i++)
         {
-            AddLevelBlock();
+            GenerateNextBlock();
         }
     }
-    public void AddLevelBlock()
+
+    private void GenerateNextBlock()
     {
-        //valor aleatorio entre 0 y la cantidad de niveles creados
-        int RandomIndex = Random.Range(0, AllTheLevelBlocks.Count);
-        //instanciamos un bloque del nivel desde la carpeta assets hasta la escena
-        LevelBlock CurrentBlock = (LevelBlock)Instantiate(AllTheLevelBlocks[RandomIndex]);
-        //pone el bloque del nivel como hijo de lLevelGenerator
-        CurrentBlock.transform.SetParent(this.transform, false);
-        
-        Vector3 SpawPosition = Vector3.zero;
+        int randomIndex = Random.Range(0, AllTheLevelBlocks.Count);
+        LevelBlock currentBlock = Instantiate(AllTheLevelBlocks[randomIndex]);
+        currentBlock.transform.SetParent(transform, false);
+
+        Vector3 spawnPosition = Vector3.zero;
         if (CurrentBlocks.Count == 0)
         {
-            SpawPosition = LevelStartPoint.position;
+            spawnPosition = LevelStartPoint.position;
         }
         else
         {
-            SpawPosition = CurrentBlocks[CurrentBlocks.Count - 1].ExitPoint.position;
+            spawnPosition = CurrentBlocks[CurrentBlocks.Count - 1].ExitPoint.position;
         }
-        //corregimos la posicion del bloque restando las posiciones
-        Vector3 Correction = new Vector3(SpawPosition.x - CurrentBlock.StartPoint.position.x,
-                                         SpawPosition.y - CurrentBlock.StartPoint.position.y, 0);
-        
-        CurrentBlock.transform.position = Correction;
-        CurrentBlocks.Add(CurrentBlock);
 
+        Vector3 correction = new Vector3(spawnPosition.x - currentBlock.StartPoint.position.x,
+                                         spawnPosition.y - currentBlock.StartPoint.position.y, 0);
+
+        currentBlock.transform.position = correction;
+        currentBlock.Initialize(this);
+        CurrentBlocks.Add(currentBlock);
     }
-    public void RemoveLevelBlock()
+
+    private void RemoveOldestBlock()
     {
-        //elimino el Bloque mas Viejo
-        LevelBlock OldestBlock = CurrentBlocks[0];
-        CurrentBlocks.Remove(OldestBlock);
-        Destroy(OldestBlock.gameObject);
+        LevelBlock oldestBlock = CurrentBlocks[0];
+        CurrentBlocks.Remove(oldestBlock);
+        Destroy(oldestBlock.gameObject);
     }
-    public void RemoveAllTheBlock()
+
+    private void RemoveAllBlocks()
     {
         while (CurrentBlocks.Count > 0)
         {
-            RemoveLevelBlock();
+            RemoveOldestBlock();
         }
     }
 }
