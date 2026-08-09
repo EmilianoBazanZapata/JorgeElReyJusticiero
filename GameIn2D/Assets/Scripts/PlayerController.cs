@@ -84,11 +84,4 @@ public class PlayerController : MonoBehaviour
         return playerMana.CurrentMana;
     }
 
-    private void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-        if (otherCollider.CompareTag("Enemy"))
-        {
-            playerHealth.ReceiveDamage(20);
-        }
-    }
 }
