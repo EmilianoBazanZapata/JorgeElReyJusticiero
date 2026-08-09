@@ -11,6 +11,8 @@ using System.Linq;
 
 public class ScreenManager : MonoBehaviour
 {
+    [SerializeField] private GameSettingsController settingsController;
+
     public Toggle toggle;
     //referencia al Cbo de las resoluciones
     public TMP_Dropdown ResolutionCbo;
@@ -33,7 +35,7 @@ public class ScreenManager : MonoBehaviour
 
     public void ActualizarPantallaCompleta(bool pantallaCompleta)
     {
-        Screen.fullScreen = pantallaCompleta;
+        settingsController.ApplyFullscreen(pantallaCompleta);
     }
 
     public void ChangeResolution()
@@ -66,15 +68,13 @@ public class ScreenManager : MonoBehaviour
         ResolutionCbo.value = ActualResolution;
         ResolutionCbo.RefreshShownValue();
         //resolucion por defecto
-        ResolutionCbo.value = PlayerPrefs.GetInt("Resolution", 0);
+        ResolutionCbo.value = settingsController.LoadResolutionIndex();
     }
 
     public void ChangeResolution(int IndexResolution)
     {
         Resolution resolution = resolutions[IndexResolution];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-        //guardamos el nuevo valor de la resolucion
-        PlayerPrefs.SetInt("Resolution", ResolutionCbo.value);
+        settingsController.ApplyResolution(resolution, ResolutionCbo.value);
     }
 }
 

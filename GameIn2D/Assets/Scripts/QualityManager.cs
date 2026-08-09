@@ -6,21 +6,21 @@ using TMPro;
 
 public class QualityManager : MonoBehaviour
 {
+    [SerializeField] private GameSettingsController settingsController;
+
     //tomo el cbo de la calidad
     public TMP_Dropdown dropdown;
     public int calidad;
     private void Start()
     {
         //el valor por defecto de la calidad es 3
-        calidad = PlayerPrefs.GetInt("NumeroCalidad", 3);
+        calidad = settingsController.LoadQuality();
     }
 
     public void AjustarClidad()
     {
         UnityEngine.Debug.Log(dropdown.value);
         // Cambiar el nivel de calidad
-        QualitySettings.SetQualityLevel(dropdown.value, true);
-        //actualizo la calidad del juego
-        PlayerPrefs.SetInt("NumeroCalidad", dropdown.value);
+        settingsController.ApplyQuality(dropdown.value);
     }
 }
