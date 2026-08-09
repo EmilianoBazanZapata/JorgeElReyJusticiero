@@ -10,6 +10,7 @@ public sealed class PlayerHealth : MonoBehaviour
     private float currentHealth;
 
     public event Action Died;
+    public event Action<float> HealthChanged;
 
     public float CurrentHealth => currentHealth;
     public float MaximumHealth => maximumHealth;
@@ -17,13 +18,25 @@ public sealed class PlayerHealth : MonoBehaviour
 
     public void ResetHealth()
     {
+        float previousHealth = currentHealth;
         currentHealth = initialHealth;
         IsDead = false;
+
+        if (currentHealth != previousHealth)
+        {
+            HealthChanged?.Invoke(currentHealth);
+        }
     }
 
     public void ReceiveDamage(float points)
     {
+        float previousHealth = currentHealth;
         currentHealth -= points;
+
+        if (currentHealth != previousHealth)
+        {
+            HealthChanged?.Invoke(currentHealth);
+        }
 
         if (currentHealth <= 0f && !IsDead)
         {
@@ -34,8 +47,14 @@ public sealed class PlayerHealth : MonoBehaviour
 
     public void Recover(float points)
     {
+        float previousHealth = currentHealth;
         currentHealth = currentHealth + points > maximumHealth
             ? maximumHealth
             : currentHealth + points;
+
+        if (currentHealth != previousHealth)
+        {
+            HealthChanged?.Invoke(currentHealth);
+        }
     }
 }

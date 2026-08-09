@@ -11,27 +11,49 @@ public enum BarType
     Mana
 }
 public class PlayerBar : MonoBehaviour
-{ 
+{
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerMana playerMana;
+
     private Slider slider;
     public BarType Type;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         this.slider = GetComponent<Slider>();
     }
 
-    // de esta forma se mostrara en el slider la cantidad de vida y mana que el usuario tiene en tiempo real
-    void Update()
+    private void OnEnable()
     {
-        switch(Type)
+        switch (Type)
         {
             case BarType.Healt:
-                slider.value = PlayerController.sharedInstance.GetHealth();
+                playerHealth.HealthChanged += UpdateValue;
+                UpdateValue(playerHealth.CurrentHealth);
                 break;
             case BarType.Mana:
-                slider.value = PlayerController.sharedInstance.GetMana();
+                playerMana.ManaChanged += UpdateValue;
+                UpdateValue(playerMana.CurrentMana);
                 break;
         }
+    }
+
+    private void OnDisable()
+    {
+        switch (Type)
+        {
+            case BarType.Healt:
+                playerHealth.HealthChanged -= UpdateValue;
+                break;
+            case BarType.Mana:
+                playerMana.ManaChanged -= UpdateValue;
+                break;
+        }
+    }
+
+    private void UpdateValue(float value)
+    {
+        slider.value = value;
     }
 }
 
