@@ -1,15 +1,20 @@
 using UnityEngine;
+using GameIn2D.Player.Health;
 
-[DisallowMultipleComponent]
-public sealed class EnemyContactDamage : MonoBehaviour
+namespace GameIn2D.Enemies.Combat
 {
-    [SerializeField] private float damage = 20f;
 
-    private void OnTriggerEnter2D(Collider2D otherCollider)
+    [DisallowMultipleComponent]
+    public sealed class EnemyContactDamage : MonoBehaviour
     {
-        if (otherCollider.CompareTag("King"))
+        [SerializeField] private float damage = 20f;
+
+        private void OnTriggerEnter2D(Collider2D otherCollider)
         {
-            otherCollider.GetComponent<PlayerHealth>().ReceiveDamage(damage);
+            if (otherCollider.CompareTag("King"))
+            {
+                otherCollider.GetComponent<PlayerHealth>().ReceiveDamage(damage);
+            }
         }
     }
 }

@@ -1,14 +1,9 @@
-public enum PlayerStateId
+namespace GameIn2D.Player.StateMachine
 {
-    Idle,
-    Run,
-    Jump,
-    Fall,
-    Dead
-}
 
-public interface IPlayerState
-{
-    PlayerStateId Id { get; }
-    bool CanTransitionTo(PlayerStateId nextState);
+    public interface IPlayerState
+    {
+        PlayerStateId Id { get; }
+        bool CanTransitionTo(PlayerStateId nextState);
+    }
 }
