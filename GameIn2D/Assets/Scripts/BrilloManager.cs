@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BrilloManager : MonoBehaviour
 {
+    [SerializeField] private GameSettingsController settingsController;
+
     //hace referencia al silder en pantalla
     public Slider slider;
     //hace referencia al valor del brillo
@@ -14,7 +16,7 @@ public class BrilloManager : MonoBehaviour
     public Image ImageOptions ;
     private void Start() {
         //agregare el brillo por defecto
-        slider.value = PlayerPrefs.GetFloat("Brillo",0.5f);
+        slider.value = settingsController.LoadBrightness();
         //pasare el valor del alfa gracias al slider
         panelBrillo.color = new Color(panelBrillo.color.r , panelBrillo.color.g , panelBrillo.color.b , slider.value);
         ImageOptions.color = new Color(panelBrillo.color.r , panelBrillo.color.g , panelBrillo.color.b , slider.value);
@@ -24,7 +26,7 @@ public class BrilloManager : MonoBehaviour
         //pasare el valor del alfa gracias al slider
         sliderValue =  valor ;
         //actualizo el brillo
-        PlayerPrefs.SetFloat("Brillo",sliderValue);
+        settingsController.SaveBrightness(sliderValue);
         //cambio el brillo
         panelBrillo.color = new Color(panelBrillo.color.r , panelBrillo.color.g , panelBrillo.color.b , slider.value); 
         ImageOptions.color = new Color(panelBrillo.color.r , panelBrillo.color.g , panelBrillo.color.b , slider.value); 
