@@ -1,0 +1,16 @@
+{
+    "name": "GameIn2D.Enemies",
+    "rootNamespace": "GameIn2D.Enemies",
+    "references": [
+        "GameIn2D.Gameplay"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
