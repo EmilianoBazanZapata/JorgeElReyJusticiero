@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeathController: {fileID: 0}
+  levelGenerator: {fileID: 0}
 --- !u!114 &4175381397641331932
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,9 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerDeathController playerDeathController;
-
-    public GameObject firstBlock;
-    GameObject temp;
+    [SerializeField] private LevelGenerator levelGenerator;
 
     private GameFlowController gameFlowController;
 
@@ -73,14 +71,13 @@ public class GameManager : MonoBehaviour
     {
         //creo el primer bloque del nivel
         transform.position = new Vector3(0, 0, 0);
-        temp = Instantiate(firstBlock, transform.position, transform.rotation);
+        levelGenerator.BeginRun(transform.position, transform.rotation);
         gameFlowController.StartGame();
         //CameraFollow.SharedInstance.ResetCameraPosition();
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         CameraFollow cameraFollow = camera.GetComponent<CameraFollow>();
         cameraFollow.ResetCameraPosition();
-        LevelGenerator.SharedInstance.RemoveAllTheBlock();
-        LevelGenerator.SharedInstance.GenerateInitialBlock();
+        levelGenerator.StartGeneration();
         //despues de generar el bloque genero el jugador
         PlayerController.sharedInstance.StartGame();
         this.CollectedObjects = 0f;
@@ -91,15 +88,14 @@ public class GameManager : MonoBehaviour
     {
         gameFlowController.RestartGame();
         PlayerController.sharedInstance.StartGame();
-        LevelGenerator.SharedInstance.GenerateInitialBlock();
+        levelGenerator.RestartRun();
     }
 
     //metodo que se llamara al morir
     public void GameOver()
     {
         gameFlowController.GameOver();
-        LevelGenerator.SharedInstance.RemoveAllTheBlock();
-        Destroy(temp);
+        levelGenerator.EndRun();
     }
 
     //metodo que llamara para volver al menu
