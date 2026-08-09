@@ -1,38 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerMovement : MonoBehaviour
 {
-
     public bool movingForward;
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-
-        if (otherCollider.tag == "Cellectable")
+        if (otherCollider.CompareTag("Cellectable"))
         {
             return;
         }
-        if (otherCollider.tag == "Potion")
+
+        if (otherCollider.CompareTag("Potion"))
         {
             return;
         }
-        if (otherCollider.tag == "Limit")
+
+        if (otherCollider.CompareTag("Limit"))
         {
-            //Debug.Log("Hay que girar al enemigo");
-
-            if (movingForward == true)
-            {
-                Enemy.turnAround = true;
-            }
-            else
-            {
-                Enemy.turnAround = false;
-            }
-
+            Enemy.SetTurnAround(movingForward);
             movingForward = !movingForward;
         }
-
     }
 }

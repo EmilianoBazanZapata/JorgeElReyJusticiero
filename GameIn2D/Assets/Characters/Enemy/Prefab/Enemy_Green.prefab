@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 61335889745726048}
   - component: {fileID: 3700477472533265928}
   - component: {fileID: 1855108335338338694}
+  - component: {fileID: 7640832422195317201}
+  - component: {fileID: 7640832422195317202}
   m_Layer: 0
   m_Name: Enemy_Green
   m_TagString: Enemy
@@ -193,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a38423fb8c49d947bc42b873d3c8cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runningSpeed: 2
 --- !u!114 &1855108335338338694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +208,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingForward: 1
+--- !u!114 &7640832422195317201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557632485913119802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3d80e5145d4c0d93529cc66cde7434, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  runningSpeed: 2
+--- !u!114 &7640832422195317202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557632485913119802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0e8d611a2b4dd4b61f8768862ca946, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  damage: 20
