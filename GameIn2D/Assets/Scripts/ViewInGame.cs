@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ViewInGame : MonoBehaviour
 {
+    [SerializeField] private PlayerProgressTracker playerProgressTracker;
+
     //etiqueta para ver la puntuacion actual
     public Text CollectableLabel;
 
@@ -20,7 +22,7 @@ public class ViewInGame : MonoBehaviour
             //UnityEngine.Debug.Log(CurrentObjects);
             this.CollectableLabel.text = CurrentObjects.ToString();
             //mostrare la distancia recorrida
-            float TraveledDistance = PlayerController.sharedInstance.GetDistance();
+            float TraveledDistance = playerProgressTracker.CurrentDistance;
                                                                         //asi solo mostrare un deciaml
             this.DistanceLabel.text = "Distancia \n" + TraveledDistance.ToString("f1");
 
