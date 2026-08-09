@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayRandomSound : MonoBehaviour
 {
-    public AudioSource _As;
+    [SerializeField] private AudioSource _As;
     //arreglo para agregar los temas
-    public AudioClip[] AudioClipArray;
+    [SerializeField] private AudioClip[] AudioClipArray;
 
     private int TemaActual = 14;
 
     private void Start()
     {
         //_As.clip = AudioClipArray[Random.Range(0,AudioClipArray.Length)];
-        _As = this.GetComponent<AudioSource>();
         _As.clip = AudioClipArray[14];
         _As.Play();
         _As.loop = true;
