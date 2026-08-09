@@ -1,19 +1,23 @@
 using UnityEngine;
 
-[DisallowMultipleComponent]
-public sealed class PlayerInputReader : MonoBehaviour
+namespace GameIn2D.Player.Input
 {
-    public bool JumpPressed { get; private set; }
-    public bool SuperRunPressed { get; private set; }
 
-    public void ReadInput()
+    [DisallowMultipleComponent]
+    public sealed class PlayerInputReader : MonoBehaviour
     {
-        JumpPressed = Input.GetKeyDown(KeyCode.Space);
-        SuperRunPressed = Input.GetButton("SuperRun");
-    }
+        public bool JumpPressed { get; private set; }
+        public bool SuperRunPressed { get; private set; }
 
-    public float ReadHorizontalMovement()
-    {
-        return Input.GetAxisRaw("HorizontalMove");
+        public void ReadInput()
+        {
+            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.Space);
+            SuperRunPressed = UnityEngine.Input.GetButton("SuperRun");
+        }
+
+        public float ReadHorizontalMovement()
+        {
+            return UnityEngine.Input.GetAxisRaw("HorizontalMove");
+        }
     }
 }

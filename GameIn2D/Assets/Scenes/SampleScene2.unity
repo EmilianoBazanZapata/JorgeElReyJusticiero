@@ -2423,7 +2423,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1322274958}
-        m_TargetAssemblyTypeName: BrilloManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameIn2D.Settings.BrilloManager, Assembly-CSharp
         m_MethodName: ChangeSlider
         m_Mode: 0
         m_Arguments:
@@ -5983,7 +5983,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1322274959}
-        m_TargetAssemblyTypeName: ScreenManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameIn2D.Settings.ScreenManager, Assembly-CSharp
         m_MethodName: ActualizarPantallaCompleta
         m_Mode: 0
         m_Arguments:
@@ -8224,7 +8224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1322274956}
-        m_TargetAssemblyTypeName: VolumenManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameIn2D.Settings.VolumenManager, Assembly-CSharp
         m_MethodName: ChangeSlider
         m_Mode: 0
         m_Arguments:

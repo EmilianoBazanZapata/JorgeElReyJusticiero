@@ -1,8 +1,12 @@
-public enum GameState
+namespace GameIn2D.GameFlow
 {
-    Menu,
-    InGame,
-    GameOver,
-    Pause,
-    Options
+
+    public enum GameState
+    {
+        Menu,
+        InGame,
+        GameOver,
+        Pause,
+        Options
+    }
 }

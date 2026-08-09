@@ -1,12 +1,16 @@
-public sealed class PlayerFallState : IPlayerState
+namespace GameIn2D.Player.StateMachine
 {
-    public PlayerStateId Id => PlayerStateId.Fall;
 
-    public bool CanTransitionTo(PlayerStateId nextState)
+    public sealed class PlayerFallState : IPlayerState
     {
-        return nextState == PlayerStateId.Jump ||
-               nextState == PlayerStateId.Idle ||
-               nextState == PlayerStateId.Run ||
-               nextState == PlayerStateId.Dead;
+        public PlayerStateId Id => PlayerStateId.Fall;
+
+        public bool CanTransitionTo(PlayerStateId nextState)
+        {
+            return nextState == PlayerStateId.Jump ||
+                   nextState == PlayerStateId.Idle ||
+                   nextState == PlayerStateId.Run ||
+                   nextState == PlayerStateId.Dead;
+        }
     }
 }

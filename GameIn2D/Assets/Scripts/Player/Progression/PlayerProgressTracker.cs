@@ -1,24 +1,28 @@
 using UnityEngine;
 
-[DisallowMultipleComponent]
-public sealed class PlayerProgressTracker : MonoBehaviour
+namespace GameIn2D.Player.Progression
 {
-    private Vector3 startPosition;
 
-    public float CurrentDistance => Mathf.Abs(transform.position.x - startPosition.x);
-
-    private void Awake()
+    [DisallowMultipleComponent]
+    public sealed class PlayerProgressTracker : MonoBehaviour
     {
-        startPosition = transform.position;
-    }
+        private Vector3 startPosition;
 
-    private void Start()
-    {
-        startPosition = transform.position;
-    }
+        public float CurrentDistance => Mathf.Abs(transform.position.x - startPosition.x);
 
-    public void ResetProgress()
-    {
-        transform.position = startPosition;
+        private void Awake()
+        {
+            startPosition = transform.position;
+        }
+
+        private void Start()
+        {
+            startPosition = transform.position;
+        }
+
+        public void ResetProgress()
+        {
+            transform.position = startPosition;
+        }
     }
 }

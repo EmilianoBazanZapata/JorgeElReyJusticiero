@@ -1,55 +1,59 @@
 using System;
 using UnityEngine;
 
-[DisallowMultipleComponent]
-public sealed class PlayerMana : MonoBehaviour
+namespace GameIn2D.Player.Mana
 {
-    [SerializeField] private float initialMana = 90f;
-    [SerializeField] private float maximumMana = 100f;
 
-    private float currentMana;
-
-    public event Action<float> ManaChanged;
-
-    public float CurrentMana => currentMana;
-    public float MaximumMana => maximumMana;
-    public bool HasMana => currentMana > 0f;
-
-    public void ResetMana()
+    [DisallowMultipleComponent]
+    public sealed class PlayerMana : MonoBehaviour
     {
-        float previousMana = currentMana;
-        currentMana = initialMana;
+        [SerializeField] private float initialMana = 90f;
+        [SerializeField] private float maximumMana = 100f;
 
-        if (currentMana != previousMana)
+        private float currentMana;
+
+        public event Action<float> ManaChanged;
+
+        public float CurrentMana => currentMana;
+        public float MaximumMana => maximumMana;
+        public bool HasMana => currentMana > 0f;
+
+        public void ResetMana()
         {
-            ManaChanged?.Invoke(currentMana);
-        }
-    }
+            float previousMana = currentMana;
+            currentMana = initialMana;
 
-    public void Consume(float points)
-    {
-        float previousMana = currentMana;
-        currentMana -= points;
-
-        if (currentMana != previousMana)
-        {
-            ManaChanged?.Invoke(currentMana);
-        }
-    }
-
-    public void Recover(float points)
-    {
-        float previousMana = currentMana;
-        currentMana += points;
-
-        if (currentMana >= maximumMana)
-        {
-            currentMana = maximumMana;
+            if (currentMana != previousMana)
+            {
+                ManaChanged?.Invoke(currentMana);
+            }
         }
 
-        if (currentMana != previousMana)
+        public void Consume(float points)
         {
-            ManaChanged?.Invoke(currentMana);
+            float previousMana = currentMana;
+            currentMana -= points;
+
+            if (currentMana != previousMana)
+            {
+                ManaChanged?.Invoke(currentMana);
+            }
+        }
+
+        public void Recover(float points)
+        {
+            float previousMana = currentMana;
+            currentMana += points;
+
+            if (currentMana >= maximumMana)
+            {
+                currentMana = maximumMana;
+            }
+
+            if (currentMana != previousMana)
+            {
+                ManaChanged?.Invoke(currentMana);
+            }
         }
     }
 }
