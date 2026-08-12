@@ -2,7 +2,8 @@
     "name": "GameIn2D.Gameplay",
     "rootNamespace": "GameIn2D",
     "references": [
-        "GameIn2D.Camera"
+        "GameIn2D.Camera",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

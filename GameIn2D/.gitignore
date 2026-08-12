@@ -235,6 +235,10 @@ xcuserdata/
 # =========================================================
 
 packages/
+!/Packages/
+/Packages/*
+!/Packages/manifest.json
+!/Packages/packages-lock.json
 *.nupkg
 *.snupkg
 
