@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine;
-using TMPro;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace GameIn2D.Settings

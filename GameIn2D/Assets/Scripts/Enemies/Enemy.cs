@@ -6,9 +6,11 @@ namespace GameIn2D.Enemies
     [DisallowMultipleComponent]
     public class Enemy : MonoBehaviour
     {
-        public static bool turnAround;
+        private bool turnAround;
 
-        public static void SetTurnAround(bool shouldTurnAround)
+        public bool TurnAround => turnAround;
+
+        public void SetTurnAround(bool shouldTurnAround)
         {
             turnAround = shouldTurnAround;
         }

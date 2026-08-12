@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using GameIn2D.Camera;
 using GameIn2D.LevelGeneration;
 using GameIn2D.Player;
@@ -14,6 +15,7 @@ namespace GameIn2D.GameFlow
         [SerializeField] private LevelGenerator levelGenerator;
 
         private GameFlowController gameFlowController;
+        private InputAction pauseAction;
 
         //variable que hace referencia al manager
         public static GameManager SharedInstance;
@@ -38,6 +40,8 @@ namespace GameIn2D.GameFlow
         {
             SharedInstance = this;
             gameFlowController = GetComponent<GameFlowController>();
+            pauseAction = new InputAction("Pause", InputActionType.Button, "<Keyboard>/p");
+            pauseAction.AddBinding("<Gamepad>/start");
         }
 
         private void OnEnable()
@@ -48,6 +52,7 @@ namespace GameIn2D.GameFlow
             }
 
             gameFlowController.StateChanging += HandleStateChanging;
+            pauseAction.Enable();
         }
 
         private void OnDisable()
@@ -58,6 +63,12 @@ namespace GameIn2D.GameFlow
             }
 
             gameFlowController.StateChanging -= HandleStateChanging;
+            pauseAction.Disable();
+        }
+
+        private void OnDestroy()
+        {
+            pauseAction.Dispose();
         }
 
         private void Start()
@@ -67,7 +78,7 @@ namespace GameIn2D.GameFlow
 
         private void Update()
         {
-            if (Input.GetButton("Pause"))
+            if (pauseAction.WasPressedThisFrame())
             {
                 Pause();
             }

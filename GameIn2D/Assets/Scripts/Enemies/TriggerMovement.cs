@@ -7,6 +7,13 @@ namespace GameIn2D.Enemies
     {
         public bool movingForward;
 
+        private Enemy enemy;
+
+        private void Awake()
+        {
+            enemy = GetComponentInParent<Enemy>();
+        }
+
         private void OnTriggerEnter2D(Collider2D otherCollider)
         {
             if (otherCollider.CompareTag("Cellectable"))
@@ -21,7 +28,7 @@ namespace GameIn2D.Enemies
 
             if (otherCollider.CompareTag("Limit"))
             {
-                Enemy.SetTurnAround(movingForward);
+                enemy.SetTurnAround(movingForward);
                 movingForward = !movingForward;
             }
         }

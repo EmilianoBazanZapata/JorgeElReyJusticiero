@@ -103,6 +103,7 @@ namespace GameIn2D.Player.StateMachine
 
         private void EnterDeadState()
         {
+            playerMovement.ResetJumpState();
             ChangeState(PlayerStateId.Dead);
         }
 

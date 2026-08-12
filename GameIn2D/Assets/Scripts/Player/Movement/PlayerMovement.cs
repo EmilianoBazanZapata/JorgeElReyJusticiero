@@ -17,11 +17,13 @@ namespace GameIn2D.Player.Movement
         [SerializeField] private float initialWalkSpeed = 2f;
         [SerializeField] private Animator animatorPlayer;
         [SerializeField] private LayerMask wallLayer;
+#pragma warning disable CS0414 // Retained to preserve existing serialized data pending a dedicated migration.
         [SerializeField] private LayerMask GroundLayer;
         [SerializeField] private LayerMask PlatformLayer;
+#pragma warning restore CS0414
 
-        private const float MANA_DECREASE_DELAY = 100;
-        private const float MANA_DECREASE_AMOUNT = 0.5f;
+        private const float SUPER_RUN_MANA_PER_SECOND = 30f;
+        private const float SUPER_JUMP_WINDOW_DURATION = 3f;
         private const int MANA_DECREASE = 5;
 
         private PlayerInputReader inputReader;
@@ -29,8 +31,8 @@ namespace GameIn2D.Player.Movement
         private Rigidbody2D rigidBody;
         private BoxCollider2D boxCollider2d;
         private bool isTouchingGround;
-        private bool isCollidingWall;
         private int jumpsRemaining = 2;
+        private float superJumpWindowRemaining;
 
         public bool IsGrounded => isTouchingGround;
         public bool IsMoving { get; private set; }
@@ -46,13 +48,15 @@ namespace GameIn2D.Player.Movement
 
         public void Tick()
         {
+            UpdateSuperJumpWindow();
+
             if (inputReader.JumpPressed)
             {
                 if (isTouchingGround)
                 {
                     Jump();
                 }
-                else if (jumpsRemaining > 0 && playerMana.HasMana)
+                else if (jumpsRemaining == 1 && playerMana.HasMana)
                 {
                     SuperJump();
                 }
@@ -76,21 +80,30 @@ namespace GameIn2D.Player.Movement
             }
             else
             {
+                if (direction == 0f)
+                {
+                    rigidBody.linearVelocity = new Vector2(0f, rigidBody.linearVelocity.y);
+                }
+
                 animatorPlayer.SetBool("Walk", false);
             }
         }
 
         public void ResetAnimationState()
         {
+            ResetJumpState();
             animatorPlayer.SetBool("IsGrounded", true);
             animatorPlayer.SetBool("Walk", false);
         }
 
+        public void ResetJumpState()
+        {
+            jumpsRemaining = 2;
+            superJumpWindowRemaining = 0f;
+        }
+
         private bool CollisionWall(float direction)
         {
-            Vector2 raycastOrigin =
-                new Vector2(transform.position.x, transform.position.y - boxCollider2d.size.y / 2f);
-            Vector2 raycastSize = new Vector2(0.2f, 0.5f);
             Vector2 raycastDirection = new Vector2(direction, 0);
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(direction, 0), 0.5f,
@@ -106,13 +119,11 @@ namespace GameIn2D.Player.Movement
             if (inputReader.SuperRunPressed && playerMana.HasMana)
             {
                 walkSpeed = runForce;
-                playerMana.Consume(MANA_DECREASE_AMOUNT);
-                Invoke("DecreaseMana", MANA_DECREASE_DELAY);
+                playerMana.Consume(SUPER_RUN_MANA_PER_SECOND * Time.deltaTime);
             }
             else
             {
                 walkSpeed = initialWalkSpeed;
-                CancelInvoke("DecreaseMana");
             }
         }
 
@@ -124,33 +135,36 @@ namespace GameIn2D.Player.Movement
                 animatorPlayer.SetBool("IsGrounded", false);
                 isTouchingGround = false;
                 jumpsRemaining = 1;
+                superJumpWindowRemaining = SUPER_JUMP_WINDOW_DURATION;
             }
         }
 
         private void SuperJump()
         {
-            rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rigidBody.AddForce(Vector2.up * superJumpForce, ForceMode2D.Impulse);
             playerMana.Consume(MANA_DECREASE);
             animatorPlayer.SetBool("IsGrounded", false);
-            jumpsRemaining = 0;
+            ExpireSuperJumpWindow();
         }
 
-        private bool IsTouchingTheGround()
+        private void UpdateSuperJumpWindow()
         {
-            if (Physics2D.Raycast(transform.position, Vector2.down, 0.8f, GroundLayer) ||
-                Physics2D.Raycast(transform.position, Vector2.down, 0.8f, PlatformLayer))
-                return true;
-
-            return false;
-        }
-
-        private void RemoveMana()
-        {
-            playerMana.Consume(MANA_DECREASE);
-            if (!playerMana.HasMana)
+            if (jumpsRemaining != 1)
             {
-                CancelInvoke("RemoveMana");
+                return;
             }
+
+            superJumpWindowRemaining -= Time.deltaTime;
+            if (superJumpWindowRemaining <= 0f)
+            {
+                ExpireSuperJumpWindow();
+            }
+        }
+
+        private void ExpireSuperJumpWindow()
+        {
+            jumpsRemaining = 0;
+            superJumpWindowRemaining = 0f;
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -194,28 +208,17 @@ namespace GameIn2D.Player.Movement
             {
                 isTouchingGround = true;
                 animatorPlayer.SetBool("IsGrounded", isTouchingGround);
-                jumpsRemaining = 2;
-            }
-
-            if (other.gameObject.CompareTag("Wall"))
-            {
-                isCollidingWall = true;
+                ResetJumpState();
             }
 
             if (other.gameObject.CompareTag("Platform"))
             {
-                isCollidingWall = true;
                 isTouchingGround = true;
             }
         }
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Wall"))
-            {
-                isCollidingWall = false;
-            }
-
             if (collision.gameObject.CompareTag("Platform"))
             {
                 isTouchingGround = false;

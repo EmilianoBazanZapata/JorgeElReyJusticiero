@@ -11,8 +11,6 @@ namespace GameIn2D.Collectables
     public class Collectable : MonoBehaviour
     {
         public CollectableType Type;
-        //variable para saber si la variable fue recogida o no
-        bool IsCollected = false;
         //falor de los coleccionables
         public int value = 0;
         private void Start()
@@ -26,8 +24,6 @@ namespace GameIn2D.Collectables
             this.GetComponent<SpriteRenderer>().enabled = true;
             //activamos el collider de la moneda
             this.GetComponent<CircleCollider2D>().enabled = true;
-            //por ahora no recogimos la moneda
-            IsCollected = false;
         }
         //metodo para desactivar la moneda
         private void Hide()
@@ -40,7 +36,6 @@ namespace GameIn2D.Collectables
         //metodo para colectar la moneda
         private void Collect()
         {
-            IsCollected = true;
             //lamaremos el metodo hide para que se oculte
             Hide();
         }
