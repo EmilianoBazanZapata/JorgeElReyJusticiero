@@ -7,6 +7,8 @@ namespace GameIn2D.Player.Input
     [DisallowMultipleComponent]
     public sealed class PlayerInputReader : MonoBehaviour
     {
+        private const float MoveDeadZone = 0.2f;
+
         private InputAction moveAction;
         private InputAction jumpAction;
         private InputAction superRunAction;
@@ -22,9 +24,15 @@ namespace GameIn2D.Player.Input
                 .With("Negative", "<Keyboard>/leftArrow")
                 .With("Positive", "<Keyboard>/d")
                 .With("Positive", "<Keyboard>/rightArrow");
+            moveAction.AddBinding("<Gamepad>/leftStick/x");
+            moveAction.AddCompositeBinding("1DAxis")
+                .With("Negative", "<Gamepad>/dpad/left")
+                .With("Positive", "<Gamepad>/dpad/right");
 
             jumpAction = new InputAction("Jump", InputActionType.Button, "<Keyboard>/space");
+            jumpAction.AddBinding("<Gamepad>/buttonSouth");
             superRunAction = new InputAction("SuperRun", InputActionType.Button, "<Keyboard>/leftShift");
+            superRunAction.AddBinding("<Gamepad>/rightShoulder");
         }
 
         private void OnEnable()
@@ -56,7 +64,10 @@ namespace GameIn2D.Player.Input
 
         public float ReadHorizontalMovement()
         {
-            return moveAction.ReadValue<float>();
+            float horizontalMovement = moveAction.ReadValue<float>();
+            return Mathf.Abs(horizontalMovement) < MoveDeadZone
+                ? 0f
+                : Mathf.Sign(horizontalMovement);
         }
     }
 }
