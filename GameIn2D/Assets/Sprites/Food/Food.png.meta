@@ -1,39 +1,84 @@
 fileFormatVersion: 2
-guid: ae7ed401e264593439f021e7ef17e19d
+guid: b224191ec2a0fa24ab58303c0050bcce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: spritesheet_enemies-original_0
+      213: 8294736678387358195
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_0
   - first:
-      213: 21300002
-    second: spritesheet_enemies-original_1
+      213: 8956704024391128536
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_1
   - first:
-      213: 21300004
-    second: spritesheet_enemies-original_2
+      213: -2516589573548804088
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_2
   - first:
-      213: 21300006
-    second: spritesheet_enemies-original_3
+      213: 9060949812049623703
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_3
   - first:
-      213: 21300008
-    second: spritesheet_enemies-original_4
+      213: -7684878639556131257
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_4
   - first:
-      213: 21300010
-    second: spritesheet_enemies-original_5
+      213: -5565736223430280060
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_5
   - first:
-      213: 21300012
-    second: spritesheet_enemies-original_6
+      213: -835720040105245920
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_6
   - first:
-      213: 21300014
-    second: spritesheet_enemies-original_7
+      213: -7137191800867662427
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_7
   - first:
-      213: 21300016
-    second: spritesheet_enemies-original_8
+      213: 8842630927566296879
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_8
   - first:
-      213: 21300018
-    second: spritesheet_enemies-original_9
+      213: 8908088792350174840
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_9
+  - first:
+      213: -3047825039560713996
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_10
+  - first:
+      213: -8657777849329085227
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_11
+  - first:
+      213: -5048466302248213606
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_12
+  - first:
+      213: 2608756426432767769
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_13
+  - first:
+      213: 8204326719247534126
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_14
+  - first:
+      213: -1037973202888725531
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_15
+  - first:
+      213: 4763740306861616488
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_16
+  - first:
+      213: 6695107800770560113
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_17
+  - first:
+      213: -1308107209930478392
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_18
+  - first:
+      213: -3094445870097160104
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_19
+  - first:
+      213: -2095532560730734300
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_20
+  - first:
+      213: 1932209049694484501
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_21
+  - first:
+      213: -6831959470078010668
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_22
+  - first:
+      213: 1407135129139326848
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_23
+  - first:
+      213: -2579344708442286783
+    second: f3779ec3-5a9c-450d-8f49-865a95fdf1ea_24
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -50,11 +95,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,7 +109,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,10 +138,11 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -105,9 +152,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -117,10 +165,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -129,245 +178,212 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_enemies-original_0
+      name: Food_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 208
-        width: 100
-        height: 79
+        x: 0
+        y: 513
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 036b9f5ca272dc645b0572c5a1b3bc2b
-      internalID: 21300000
+      spriteID: 59ca38dd79f587340a3765019f9bf996
+      internalID: -219886737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_1
+      name: Food_1
       rect:
         serializedVersion: 2
-        x: 187
-        y: 205
-        width: 107
-        height: 79
+        x: 384
+        y: 513
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed97ce64f53b010489ad68d71cd0c844
-      internalID: 21300002
+      spriteID: 8cf0b0b5dbff6b140aa602a99c85a504
+      internalID: -799425100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_2
+      name: Food_2
       rect:
         serializedVersion: 2
-        x: 348
-        y: 205
-        width: 110
-        height: 72
+        x: 768
+        y: 513
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d39b5e367ce3e1409ed4b93a4f9eae2
-      internalID: 21300004
+      spriteID: f520488726d5d194d98cbc364ad9b512
+      internalID: 1972680260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_3
+      name: Food_3
       rect:
         serializedVersion: 2
-        x: 515
-        y: 208
-        width: 107
-        height: 69
+        x: 1152
+        y: 513
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e5df8df7e1060479aeb9eeea6820d6
-      internalID: 21300006
+      spriteID: 156ae4c9b2bcbd34bbcadcc2711420ef
+      internalID: 2095820118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_4
+      name: Food_4
       rect:
         serializedVersion: 2
-        x: 683
-        y: 211
-        width: 100
-        height: 73
+        x: 0
+        y: 2
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea6bf5bf8c914ef4ca3f236145adf081
-      internalID: 21300008
+      spriteID: 80a45b3a1780bca46b0ec8b1c61fda83
+      internalID: 779716411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_5
+      name: Food_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 34
-        width: 90
-        height: 103
+        x: 384
+        y: 2
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 149ed92a4596fd24781ff10fb1fe8e43
-      internalID: 21300010
+      spriteID: 7ac6513c0d46ce245a626c576dbaa3c8
+      internalID: -1031949740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_6
+      name: Food_6
       rect:
         serializedVersion: 2
-        x: 205
-        y: 34
-        width: 89
-        height: 107
+        x: 768
+        y: 2
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6556cfde1615d749a51c3f144e43d9b
-      internalID: 21300012
+      spriteID: 4e6c85c821241704693dc2238642024f
+      internalID: -1131678960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_enemies-original_7
+      name: Food_7
       rect:
         serializedVersion: 2
-        x: 372
-        y: 30
-        width: 90
-        height: 107
+        x: 1152
+        y: 2
+        width: 384
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66ff9bf48ef829d4592a4d6564f82526
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_enemies-original_8
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 27
-        width: 89
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb5dc1f59cad45642b45a84c8c827206
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_enemies-original_9
-      rect:
-        serializedVersion: 2
-        x: 693
-        y: 23
-        width: 86
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31cd3b921f0b96d41843621d59d543ad
-      internalID: 21300018
+      spriteID: 71b8513b9f0f983419369035236ef0c1
+      internalID: -1816365619
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 3c4fe39e3df10ba42af6435937404538
+    spriteID: 0fd054e1141d0f44bb8c9f04946a06de
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      spritesheet_enemies-original_0: 21300000
-      spritesheet_enemies-original_4: 21300008
-      spritesheet_enemies-original_7: 21300014
-      spritesheet_enemies-original_9: 21300018
-      spritesheet_enemies-original_3: 21300006
-      spritesheet_enemies-original_2: 21300004
-      spritesheet_enemies-original_8: 21300016
-      spritesheet_enemies-original_5: 21300010
-      spritesheet_enemies-original_1: 21300002
-      spritesheet_enemies-original_6: 21300012
-  spritePackingTag: 
+      Food_0: -219886737
+      Food_1: -799425100
+      Food_2: 1972680260
+      Food_3: 2095820118
+      Food_4: 779716411
+      Food_5: -1031949740
+      Food_6: -1131678960
+      Food_7: -1816365619
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
