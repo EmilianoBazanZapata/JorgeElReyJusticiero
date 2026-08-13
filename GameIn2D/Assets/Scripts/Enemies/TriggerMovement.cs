@@ -5,8 +5,6 @@ namespace GameIn2D.Enemies
 
     public class TriggerMovement : MonoBehaviour
     {
-        public bool movingForward;
-
         private Enemy enemy;
 
         private void Awake()
@@ -28,8 +26,7 @@ namespace GameIn2D.Enemies
 
             if (otherCollider.CompareTag("Limit"))
             {
-                enemy.SetTurnAround(movingForward);
-                movingForward = !movingForward;
+                enemy.ReverseDirection();
             }
         }
     }
